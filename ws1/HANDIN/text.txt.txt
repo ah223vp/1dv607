@@ -1,0 +1,15 @@
+The major changes I made from the first handin are:
+	Remade the layout dso I would not have any linecrossings and make it easier to read.
+	Removed the boat details as a conceptual class.
+	Removed Event as a conceptual class.
+
+I am really interested in in hearing your feedback on this. The Reviews I got said my domain had to many classes and were in to much detail. 
+From the diagrams I reviewed they were alot "simpler" than mine aswell so there might be a point to this.
+Still I feel like mine is not too detailed. When I think about domain modelling I think like this,
+A way to make a description of the problem domain. To my help I have some use cases that creates some form of requirements. And if I make my model
+less detailed than this I feel like it doesn´t do any good. I cant use it for anything if the requirements are not visualized in some way.
+
+I removed boat details and event class because those I feel are the least important for understanding the doamin and the requirements and perhaps 
+only adds to clutter in this stage.
+I added berth history to the boat class since that will be important when assigning a new berth.
+I removed the attributes from the user class since they are not attributes but more like children.
