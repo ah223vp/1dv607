@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registry>
+	<member>
+		<name>Andreas</name>
+		<p_number>900</p_number>
+		<m_id>1</m_id>
+		<Boat>
+			<length>NA</length>
+			<type>NA</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Cecilia</name>
+		<p_number>500</p_number>
+		<m_id>2</m_id>
+		<Boat>
+			<length>7</length>
+			<type>Kayak</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Anton</name>
+		<p_number>100</p_number>
+		<m_id>3</m_id>
+		<Boat>
+			<length>NA</length>
+			<type>NA</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Calle</name>
+		<p_number>555</p_number>
+		<m_id>4</m_id>
+		<Boat>
+			<length>NA</length>
+			<type>NA</type>
+		</Boat>
+	</member>
+</Registry>

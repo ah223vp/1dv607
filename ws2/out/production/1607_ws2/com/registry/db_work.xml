@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registry>
+	<member>
+		<name>Cecilia</name>
+		<p_number>500</p_number>
+		<m_id>2</m_id>
+		<Boat>
+			<length>4</length>
+			<type>Sailboat</type>
+		</Boat>
+	</member>
+	<member>
+		<name>AntonFjanton</name>
+		<p_number>880721-8550</p_number>
+		<m_id>3</m_id>
+		<Boat>
+			<length>5</length>
+			<type>Kayak</type>
+		</Boat>
+	</member>
+	<member>
+		<name>CalleBalle</name>
+		<p_number>555</p_number>
+		<m_id>4</m_id>
+		<Boat>
+			<length>8</length>
+			<type>Sailboat</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Andreas</name>
+		<p_number>8906218550</p_number>
+		<m_id>56</m_id>
+		<Boat>
+			<length>0</length>
+			<type>0</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Test</name>
+		<p_number>8906218555551</p_number>
+		<m_id>552</m_id>
+		<Boat>
+			<length>No boats</length>
+			<type>NA</type>
+		</Boat>
+	</member>
+</Registry>
