@@ -47,6 +47,10 @@
 			<type>Sailboat</type>
 			<length>100</length>
 			<type>Motorsailer</type>
+			<length>a</length>
+			<type>Motorsailer</type>
+			<length>6</length>
+			<type>Motorsailer</type>
 		</Boat>
 	</member>
 </Registry>

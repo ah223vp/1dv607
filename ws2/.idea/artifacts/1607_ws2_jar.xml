@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="1607_ws2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/1607_ws2_jar</output-path>
+    <root id="archive" name="1607_ws2.jar">
+      <element id="module-output" name="1607_ws2" />
+    </root>
+  </artifact>
+</component>

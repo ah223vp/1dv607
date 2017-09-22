@@ -23,13 +23,7 @@ public class View_inputControl {
         helperStrings = help;
         db = xml_db;
     }
-    /*
-    public String getInput(){
-        helperStrings.getMainMessage();
-        c = scan.nextLine();
-        return c;
-    }
-    */
+
     public void listMembers(String str){
         List<Member> members = db.listMembers();
 
@@ -42,7 +36,6 @@ public class View_inputControl {
                 System.out.println(member.compactList());
             }
         }
-
     }
     public void listMember(){
         int id = getID();
@@ -84,7 +77,6 @@ public class View_inputControl {
             helperStrings.displayMemberNoeExistMsg();
         }
     }
-
     private int getID(){
         int id = -1;
         try{
@@ -96,7 +88,6 @@ public class View_inputControl {
         }
         return id;
     }
-
     public void addBoat(){
         helperStrings.displayChangeMessage();
         int id = getID();
@@ -142,7 +133,6 @@ public class View_inputControl {
         ArrayList boats = db.getBoatsForMember(id);
         helperStrings.printBoats(boats);
         System.out.print("Boat number: ");
-        //int index = scan.nextInt();
         int index = getID();
         validateIndex(boats, index);
         scan.nextLine();
