@@ -92,6 +92,7 @@ public class View_inputControl {
 
             return id;
         }catch(Exception e){
+            scan.nextLine();
             System.out.println("Only integers allowed");
         }
         return id;
@@ -164,7 +165,7 @@ public class View_inputControl {
             }
         }catch(Exception e){
             System.out.println(e);
-            scan.nextLine();
+            //scan.nextLine();
             console.getInput();
         }
 

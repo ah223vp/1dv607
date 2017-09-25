@@ -62,15 +62,6 @@
 		</Boat>
 	</member>
 	<member>
-		<name>Testar!!</name>
-		<p_number>a</p_number>
-		<m_id>161</m_id>
-		<Boat>
-			<length>100</length>
-			<type>Other</type>
-		</Boat>
-	</member>
-	<member>
 		<name>AndreasTest</name>
 		<p_number>1234</p_number>
 		<m_id>405</m_id>
