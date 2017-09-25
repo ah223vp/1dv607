@@ -1,6 +1,9 @@
 package com.registry.model;
 
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,8 +34,20 @@ public class M_dbWriter {
         eventFactory = XMLEventFactory.newInstance();
         end = eventFactory.createDTD("\n");
         tab = eventFactory.createDTD("\t");
+
+        URL url = getClass().getResource(dbFile);
+        File file = new File(url.toURI());
+        OutputStream out = new FileOutputStream(file);
+
+        eventWriter = outputFactory
+                .createXMLEventWriter(out);
+
+
+        /*
         eventWriter = outputFactory
                 .createXMLEventWriter(new FileOutputStream(dbFile));
+
+                */
 
         StartDocument startDocument = eventFactory.createStartDocument();
         eventWriter.add(startDocument);

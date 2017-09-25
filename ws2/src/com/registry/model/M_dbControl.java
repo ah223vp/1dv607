@@ -1,11 +1,13 @@
 package com.registry.model;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class M_dbControl {
 
-    private String dbFile = "src/com/registry/model/db.xml";
+    //private URL url = getClass().getResource("db.xml");
+    private String dbFile = "db.xml";
     private M_dbReader db_read = new M_dbReader(dbFile);
     private M_dbWriter db_write = new M_dbWriter(dbFile);
     private List<Member> dbList;
@@ -56,7 +58,6 @@ public class M_dbControl {
     }
     public void changeMemberInfo(int memberId, String name, String p_number){
         Member member = getMember(memberId);
-
         if(!name.equals("")){
             member.setName(name);
         }

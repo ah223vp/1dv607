@@ -35,14 +35,15 @@ public class M_dbReader {
     }
 
     @SuppressWarnings({ "unchecked", "null" })
-    public List<Member> readFromDB(String dbFile) {
+    public List<Member> readFromDB(String dbFile){
         members = new ArrayList<>();
         //List<Member> items = new ArrayList<Member>();
         try {
             // First, create a new XMLInputFactory
             XMLInputFactory inputFactory = XMLInputFactory.newInstance();
             // Setup a new eventReader
-            InputStream in = new FileInputStream(dbFile);
+            //InputStream in = new FileInputStream(dbFile);
+            InputStream in = getClass().getResourceAsStream(dbFile);
             XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
             // read the XML document
             Member member = null;
@@ -122,12 +123,10 @@ public class M_dbReader {
                 }
 
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (XMLStreamException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        //System.out.println(items.get(2));
+
         return members;
     }
 

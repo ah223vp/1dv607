@@ -45,5 +45,8 @@ public class View_strings {
            System.out.println();
        }
    }
+   public void displaySeeMemberMsg(){
+       System.out.print("Id of member to list: ");
+   }
 
 }

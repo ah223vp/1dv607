@@ -8,15 +8,6 @@
 		</Boat>
 	</member>
 	<member>
-		<name>Tester2</name>
-		<p_number>5555</p_number>
-		<m_id>11</m_id>
-		<Boat>
-			<length>10</length>
-			<type>Canoe</type>
-		</Boat>
-	</member>
-	<member>
 		<name>Hanna</name>
 		<p_number>123131</p_number>
 		<m_id>396</m_id>
@@ -40,17 +31,57 @@
 	</member>
 	<member>
 		<name>ApanBanarne</name>
-		<p_number>12345</p_number>
+		<p_number>a</p_number>
 		<m_id>215</m_id>
 		<Boat>
 			<length>20</length>
 			<type>Sailboat</type>
+			<length>500</length>
+			<type>Motorsailer</type>
+		</Boat>
+	</member>
+	<member>
+		<name>Nämnaren 2</name>
+		<p_number>1231254123</p_number>
+		<m_id>90</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>hepphepp</name>
+		<p_number>123135</p_number>
+		<m_id>325</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>hablo ingles</name>
+		<p_number>123456</p_number>
+		<m_id>387</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>Testar!!</name>
+		<p_number>a</p_number>
+		<m_id>161</m_id>
+		<Boat>
 			<length>100</length>
-			<type>Motorsailer</type>
-			<length>a</length>
-			<type>Motorsailer</type>
-			<length>6</length>
-			<type>Motorsailer</type>
+			<type>Other</type>
+		</Boat>
+	</member>
+	<member>
+		<name>AndreasTest</name>
+		<p_number>1234</p_number>
+		<m_id>405</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>Spanish</name>
+		<p_number>12345</p_number>
+		<m_id>996</m_id>
+		<Boat>
 		</Boat>
 	</member>
 </Registry>

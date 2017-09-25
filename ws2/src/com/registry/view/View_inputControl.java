@@ -38,6 +38,7 @@ public class View_inputControl {
         }
     }
     public void listMember(){
+        helperStrings.displaySeeMemberMsg();
         int id = getID();
         if(db.memberExists(id)){
             System.out.println(db.listMember(id));
@@ -58,29 +59,36 @@ public class View_inputControl {
 
     }
     public void addMember(){
-        System.out.print("Name: ");
-        String name = scan.nextLine();
-        System.out.print("Personal Number: ");
-        String p_number = scan.nextLine();
-        db.addMember(name, p_number);
+        int id = -1;
+        getMemberInfo(id);
     }
     public void changeMemberInfo(){
         helperStrings.displayChangeMessage();
         int id = getID();
         if(db.memberExists(id)){
-            System.out.print("Name: ");
-            String name = scan.nextLine();
-            System.out.print("Personal Number: ");
-            String p_number = scan.nextLine();
-            db.changeMemberInfo(id, name, p_number);
+           getMemberInfo(id);
         }else {
             helperStrings.displayMemberNoeExistMsg();
+        }
+    }
+    private void getMemberInfo(int id){
+
+        System.out.print("Name: ");
+        String name = scan.nextLine();
+
+        System.out.print("Personal Number: ");
+        String p_number = scan.nextLine();
+        if(id != -1){
+            db.changeMemberInfo(id, name, p_number);
+        }else {
+            db.addMember(name, p_number);
         }
     }
     private int getID(){
         int id = -1;
         try{
             id = scan.nextInt();
+            scan.nextLine();
 
             return id;
         }catch(Exception e){
@@ -135,7 +143,7 @@ public class View_inputControl {
         System.out.print("Boat number: ");
         int index = getID();
         validateIndex(boats, index);
-        scan.nextLine();
+        //scan.nextLine();
         return index;
     }
     private String selectBoatType(int id){
@@ -145,7 +153,7 @@ public class View_inputControl {
         System.out.print("Type number: ");
         int num = getID();
         validateIndex(db.getPermittedTypes(id), num);
-        scan.nextLine();
+        //scan.nextLine();
         String type = db.getPermittedTypes(id).get(num);
         return type;
     }
