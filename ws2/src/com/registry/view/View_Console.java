@@ -4,29 +4,31 @@ import com.registry.model.M_dbControl;
 
 import java.util.Scanner;
 
+/**
+ * Main class for the UI part.
+ * Will be used for authentication, hence being small.
+ */
 public class View_Console {
 
-    public M_dbControl DBHandle;
+    private M_dbControl DBHandle;
     private View_inputControl v;
     private View_strings helperStrings = new View_strings();
-    //private View_inputControl v = new View_inputControl();
-    private final Scanner scan = new Scanner(System.in);
     private String c;
 
+    private final Scanner scan = new Scanner(System.in);
 
 
     public View_Console(M_dbControl db){
         DBHandle = db;
-        v = new View_inputControl(db, helperStrings, this);
-        //start();
+        v = new View_inputControl(DBHandle, helperStrings, this);
     }
-    public String popInput(){
+    private String popInput(){
         helperStrings.getMainMessage();
         c = scan.nextLine();
         return c;
     }
     public void getInput(){
-        String c = popInput();
+        c = popInput();
 
         if (c.equals("list -v")) {
             v.listMembers("v");

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Registry>
 	<member>
-		<name>AntonFjanton</name>
+		<name>AntonFjanton111</name>
 		<p_number>111111111</p_number>
 		<m_id>3</m_id>
 		<Boat>
@@ -41,7 +41,7 @@
 		</Boat>
 	</member>
 	<member>
-		<name>Nämnaren 2</name>
+		<name>Namnaren2</name>
 		<p_number>1231254123</p_number>
 		<m_id>90</m_id>
 		<Boat>
@@ -55,7 +55,7 @@
 		</Boat>
 	</member>
 	<member>
-		<name>hablo ingles</name>
+		<name>habloingles</name>
 		<p_number>123456</p_number>
 		<m_id>387</m_id>
 		<Boat>

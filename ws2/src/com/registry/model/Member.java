@@ -1,5 +1,6 @@
 package com.registry.model;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -78,9 +79,13 @@ public class Member {
 
     @Override
     public String toString() {
+
         return "Member [ " + name + " , p_number = " + p_number + ", m_id = " + m_id + "\n"
                 + "\t" + "Boats: " + boats;
+
+
     }
+
     public String compactList() {
         return "Member [name=" + name + ", m_id=" + m_id + ", n_boats=" + getN_boats() + "]";
     }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class M_dbControl {
 
-    //private URL url = getClass().getResource("db.xml");
+
     private String dbFile = "db.xml";
     private M_dbReader db_read = new M_dbReader(dbFile);
     private M_dbWriter db_write = new M_dbWriter(dbFile);
@@ -26,8 +26,15 @@ public class M_dbControl {
     private void updateDbFile(){
         dbList = db_read.readFromDB(dbFile);
     }
-    public List<Member> listMembers(){
+    public List<Member> listMembersVerbose(){
         return dbList;
+    }
+    public List listMembersCompact(){
+        List<String> list = new ArrayList<>();
+        for(Member m : dbList){
+            list.add(m.compactList());
+        }
+        return list;
     }
     public Member listMember(int memberId){
         return getMember(memberId);
@@ -88,7 +95,7 @@ public class M_dbControl {
     }
     public void deleteMember(int memberId){
         List<Member> list;
-        list = listMembers();
+        list = listMembersVerbose();
 
         for (Member i : list){
             if(Integer.parseInt(i.getM_id()) == memberId){
