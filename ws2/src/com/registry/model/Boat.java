@@ -1,9 +1,13 @@
 package com.registry.model;
 
-
+/**
+ * Representing a boat that the member can have. Is used for
+ * input handling and when reading/writing form the DB.
+ * Custom toString for easier printouts.
+ */
 public class Boat {
-    private String length;
 
+    private String length;
     private String type;
 
 

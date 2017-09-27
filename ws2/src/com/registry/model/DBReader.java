@@ -1,22 +1,23 @@
 package com.registry.model;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-
-public class M_dbReader {
+/**
+ * Reader Class for the DB.
+ * Reads the entire file everytime.
+ * Returns a List with Members and Boats representating the file output.
+ */
+public class DBReader {
     private final String MEMBER = "member";
     private final String NAME = "name";
     private final String P_NUMBER = "p_number";
@@ -30,7 +31,7 @@ public class M_dbReader {
 
     public List<Member> members = new ArrayList<Member>();
 
-    public M_dbReader(String dbFile){
+    public DBReader(String dbFile){
         this.dbFile = dbFile;
     }
 
@@ -43,7 +44,10 @@ public class M_dbReader {
             XMLInputFactory inputFactory = XMLInputFactory.newInstance();
             // Setup a new eventReader
             //InputStream in = new FileInputStream(dbFile);
-            InputStream in = getClass().getResourceAsStream(dbFile);
+            File file = new File(dbFile);
+           // InputStream in = getClass().getResourceAsStream(file);
+            InputStream in = new FileInputStream(file);
+
             XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
             // read the XML document
             Member member = null;
@@ -121,14 +125,12 @@ public class M_dbReader {
                         members.add(member);
                     }
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        // List with members
         return members;
     }
-
-
 }

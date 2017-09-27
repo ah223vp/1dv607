@@ -13,7 +13,11 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.*;
 
-public class M_dbWriter {
+/**
+ * Writer class for the DB.
+ * Writes the whole file everytime, not optimal but sufficient at the moment.
+ */
+public class DBWriter {
 
     // create an XMLOutputFactory
     private XMLOutputFactory outputFactory;
@@ -25,29 +29,23 @@ public class M_dbWriter {
     private String dbFile;
 
 
-    public M_dbWriter(String dbFile){
+    public DBWriter(String dbFile){
         this.dbFile = dbFile;
     }
 
     public void writeToDB(List<Member> list) throws Exception {
+
+        try{
         outputFactory = XMLOutputFactory.newInstance();
         eventFactory = XMLEventFactory.newInstance();
         end = eventFactory.createDTD("\n");
         tab = eventFactory.createDTD("\t");
+        File file = new File(dbFile);
 
-        URL url = getClass().getResource(dbFile);
-        File file = new File(url.toURI());
         OutputStream out = new FileOutputStream(file);
 
         eventWriter = outputFactory
                 .createXMLEventWriter(out);
-
-
-        /*
-        eventWriter = outputFactory
-                .createXMLEventWriter(new FileOutputStream(dbFile));
-
-                */
 
         StartDocument startDocument = eventFactory.createStartDocument();
         eventWriter.add(startDocument);
@@ -79,8 +77,22 @@ public class M_dbWriter {
         eventWriter.add(stop);
         eventWriter.add(eventFactory.createEndDocument());
         eventWriter.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 
+    /**
+     * Create Member XML element
+     * @param eventWriter
+     * @param name
+     * @param p_number
+     * @param m_id
+     * @param n_boats
+     * @param type_boats
+     * @param member
+     * @throws Exception
+     */
     private void createMemberElement(XMLEventWriter eventWriter, String name, String p_number, String m_id
     , String n_boats, String type_boats, Member member) throws Exception{
         createNode(eventWriter, "name", name);
@@ -105,6 +117,12 @@ public class M_dbWriter {
 
     }
 
+    /**
+     * Creating BoatXMLElement
+     * @param boats
+     * @param eventWriter
+     * @throws Exception
+     */
     private void createBoatElement(ArrayList<Boat> boats, XMLEventWriter eventWriter) throws Exception{
         if(boats.size() == 0){
 
@@ -119,6 +137,14 @@ public class M_dbWriter {
         }
 
     }
+
+    /**
+     * Creating XML element
+     * @param eventWriter
+     * @param name
+     * @param value
+     * @throws XMLStreamException
+     */
     private void createNode(XMLEventWriter eventWriter, String name,
                             String value) throws XMLStreamException {
 

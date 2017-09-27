@@ -1,7 +1,7 @@
 package com.registry.view;
 
 
-import com.registry.model.M_dbControl;
+import com.registry.model.DBControl;
 
 
 import java.util.ArrayList;
@@ -12,96 +12,101 @@ import java.util.Scanner;
  * Class for the input actions.
  * Calls are being made to the DB form here "DB".
  */
-public class View_inputControl {
+public class InputControl {
 
     private final Scanner scan = new Scanner(System.in);
-    public View_strings helperStrings;
-    private M_dbControl db;
-    private View_Console console;
+    public PrintStrings print;
+    private DBControl m_DB;
+    private Console console;
 
-    public View_inputControl(M_dbControl xml_db, View_strings help, View_Console v){
-        console = v;
-        helperStrings = help;
-        db = xml_db;
+    public InputControl(DBControl m_DB, Console console, PrintStrings print){
+        this.print = print;
+        this.console = console;
+        this.m_DB = m_DB;
     }
 
     public void listMembers(String str){
-        List members = db.listMembersVerbose();
         if (str.equals("v")) {
+            List members = m_DB.listMembersVerbose();
             for(Object member : members){
                 System.out.println(member);
             }
         }else {
-            for(Object i : db.listMembersCompact()){
+            for(Object i : m_DB.listMembersCompact()){
                 System.out.println(i);
             }
         }
     }
     public void listMember(){
-        helperStrings.displaySeeMemberMsg();
+        print.displaySeeMemberMsg();
         int id = getID();
 
-        System.out.println(db.listMember(id));
+        System.out.println(m_DB.listMember(id));
 
     }
     public void deleteMember(){
-        helperStrings.displayDeleteMessage();
+        print.displayDeleteMessage();
         int id = getID();
 
-        db.deleteMember(id);
-        System.out.println("Member Removed");
+        m_DB.deleteMember(id);
+        print.displayMemberRemovedMsg();
     }
     public void addMember(){
         int id = -1;
         getMemberInfo(id);
     }
     public void changeMemberInfo(){
-        helperStrings.displayChangeMessage();
+        print.displayChangeMessage();
         int id = getID();
         getMemberInfo(id);
     }
 
+
     public void addBoat(){
-        helperStrings.displayChangeMessage();
+        print.displayChangeMessage();
         int id = getID();
         String type = selectBoatType(id);
-        System.out.print("Boat length: ");
+        print.displayBoatLengthMsg();
         String length = scan.nextLine();
         if(length.equals("") || length.equals("0")){
-            System.out.println("Length must be specified");
+            print.errorLength();
             return;
         }
-        db.addBoat(id, type, length);
+        m_DB.addBoat(id, type, length);
     }
     public void deleteBoat(){
-        helperStrings.displayDeleteMessageBoat();
+        print.displayDeleteMessageBoat();
         int id = getID();
 
         int index = getBoats(id);
-        db.deleteBoat(id, index);
+        m_DB.deleteBoat(id, index);
 
     }
     public void changeBoatInfo(){
-        helperStrings.displayChangeMessage();
+        print.displayChangeMessage();
         int id = getID();
 
         int index = getBoats(id);
         String type = selectBoatType(id);
-        System.out.print("Boat length: ");
+        print.displayBoatLengthMsg();
         String length = scan.nextLine();
         if(length.equals("0")){
-            System.out.println("Length is not allowed to be 0");
+            print.errorLength();
             return;
         }
-        db.changeBoatInfo(id, index, type, length);
+        m_DB.changeBoatInfo(id, index, type, length);
     }
 
 
     // Helper methods below
     private int getBoats(int id){
-        ArrayList boats = db.getBoatsForMember(id);
-        helperStrings.printBoats(boats);
-        System.out.print("Boat number: ");
+        ArrayList boats = m_DB.getBoatsForMember(id);
+        if(boats.size() == 0){
+            print.errorUserHasNoBoats();
+            console.getInput();
+        }
+        print.printBoats(boats);
+        print.displayBoatNmrMsg();
         int index = validateBoatInput();
 
         validateIndex(boats, index);
@@ -113,7 +118,7 @@ public class View_inputControl {
             index = scan.nextInt();
             scan.nextLine();
         }catch(Exception e){
-            System.out.println("Only ints");
+            print.errorIntInput();
             scan.nextLine();
             console.getInput();
         }
@@ -121,28 +126,31 @@ public class View_inputControl {
     }
     private String selectBoatType(int id){
 
-        for(int i = 0; i < db.getPermittedTypes(id).size(); i++){
-            System.out.println(i + " is equal to type: " + db.getPermittedTypes(id).get(i));
+        for(int i = 0; i < m_DB.getPermittedTypes(id).size(); i++){
+            System.out.print(i);
+            print.displayIsEqualMsg();
+            System.out.print(m_DB.getPermittedTypes(id).get(i));
+            System.out.println();
         }
-        System.out.print("Type number: ");
+        print.displayBoatTypeMsg();
         int num = validateBoatInput();
-        validateIndex(db.getPermittedTypes(id), num);
+        validateIndex(m_DB.getPermittedTypes(id), num);
 
-        String type = db.getPermittedTypes(id).get(num);
+        String type = m_DB.getPermittedTypes(id).get(num);
         return type;
 
     }
     private void getMemberInfo(int id){
 
-        System.out.print("Name: ");
+        print.displayNameMsg();
         String name = scan.nextLine();
 
-        System.out.print("Personal Number: ");
+        print.displayP_NumberMsg();
         String p_number = scan.nextLine();
         if(id != -1){
-            db.changeMemberInfo(id, name, p_number);
+            m_DB.changeMemberInfo(id, name, p_number);
         }else {
-            db.addMember(name, p_number);
+            m_DB.addMember(name, p_number);
         }
     }
     private int getID(){
@@ -150,16 +158,16 @@ public class View_inputControl {
         try{
             id = scan.nextInt();
             scan.nextLine();
-            if(db.memberExists(id)){
+            if(m_DB.memberExists(id)){
                 return id;
             }else {
-                helperStrings.displayMemberNoeExistMsg();
+                print.errorMemberNoeExistMsg();
                 console.getInput();
             }
 
         }catch(Exception e){
             scan.nextLine();
-            System.out.println("Only integers allowed");
+            print.errorIntInput();
             console.getInput();
         }
         return id;
@@ -170,7 +178,7 @@ public class View_inputControl {
                 throw new Exception();
             }
         }catch(Exception e){
-            System.out.println("Index not allowed");
+            print.errorIndex();
             console.getInput();
         }
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Registry>
 	<member>
-		<name>AntonFjanton</name>
+		<name>AntonFjanton111</name>
 		<p_number>111111111</p_number>
 		<m_id>3</m_id>
 		<Boat>
@@ -15,21 +15,6 @@
 		</Boat>
 	</member>
 	<member>
-		<name>Magnus</name>
-		<p_number>12131231</p_number>
-		<m_id>120</m_id>
-		<Boat>
-			<length>100</length>
-			<type>Sailboat</type>
-			<length>12</length>
-			<type>Motorsailer</type>
-			<length>10</length>
-			<type>Kayak/Canoe</type>
-			<length>14</length>
-			<type>Sailboat</type>
-		</Boat>
-	</member>
-	<member>
 		<name>ApanBanarne</name>
 		<p_number>a</p_number>
 		<m_id>215</m_id>
@@ -38,13 +23,8 @@
 			<type>Sailboat</type>
 			<length>500</length>
 			<type>Motorsailer</type>
-		</Boat>
-	</member>
-	<member>
-		<name>Nämnaren 2</name>
-		<p_number>1231254123</p_number>
-		<m_id>90</m_id>
-		<Boat>
+			<length>10</length>
+			<type>Kayak/Canoe</type>
 		</Boat>
 	</member>
 	<member>
@@ -55,7 +35,7 @@
 		</Boat>
 	</member>
 	<member>
-		<name>hablo ingles</name>
+		<name>habloingles</name>
 		<p_number>123456</p_number>
 		<m_id>387</m_id>
 		<Boat>

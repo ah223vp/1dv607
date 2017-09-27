@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
+/**
+ * Class representing a member of the clud.
+ * Handles the printing of members and adding boats.
+ */
 public class Member {
 
     private String name;
@@ -79,11 +83,8 @@ public class Member {
 
     @Override
     public String toString() {
-
         return "Member [ " + name + " , p_number = " + p_number + ", m_id = " + m_id + "\n"
                 + "\t" + "Boats: " + boats;
-
-
     }
 
     public String compactList() {

@@ -3,15 +3,20 @@ package com.registry.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class M_dbControl {
+/**
+ * Class to interact with the DB, all methods exist in this class.
+ * @dbFile The file representing the Database.
+ * dbList is updated after every write method has been called.
+ */
+public class DBControl {
 
-
-    private String dbFile = "db.xml";
-    private M_dbReader db_read = new M_dbReader(dbFile);
-    private M_dbWriter db_write = new M_dbWriter(dbFile);
+    private String dbFile = "src/com/registry/db.xml"; // File for debugging
+    //private String dbFile = "./db.xml"; // File for .jar
+    private DBReader db_read = new DBReader(dbFile);
+    private DBWriter db_write = new DBWriter(dbFile);
     private List<Member> dbList;
 
-    public M_dbControl(){
+    public DBControl(){
         dbList = db_read.readFromDB(dbFile);
     }
     public Boolean memberExists(int id){
@@ -23,9 +28,7 @@ public class M_dbControl {
         }
         return false;
     }
-    private void updateDbFile(){
-        dbList = db_read.readFromDB(dbFile);
-    }
+
     public List<Member> listMembersVerbose(){
         return dbList;
     }
@@ -43,6 +46,8 @@ public class M_dbControl {
         Member i = new Member();
         i.setName(name);
         i.setP_number(p_number);
+        // The setM_id can be made a million times better but for this app I think
+        //it is sufficient
         i.setM_id(Integer.toString((int)Math.round(Math.random() * 1000)));
         dbList.add(i);
         writeToDB(dbList);
@@ -72,16 +77,7 @@ public class M_dbControl {
         }
         writeToDB(dbList);
     }
-    private Member getMember(int id){
-        Member member = null;
-        for(Member item : dbList){
-            int temp = Integer.parseInt(item.getM_id());
-            if(temp == id){
-                member = item;
-            }
-        }
-        return member;
-    }
+
     public void addBoat(int id, String type, String length){
         Member member = getMember(id);
 
@@ -104,6 +100,20 @@ public class M_dbControl {
                 break;
             }
         }
+    }
+    // Private methods below here.
+    private Member getMember(int id){
+        Member member = null;
+        for(Member item : dbList){
+            int temp = Integer.parseInt(item.getM_id());
+            if(temp == id){
+                member = item;
+            }
+        }
+        return member;
+    }
+    private void updateDbFile(){
+        dbList = db_read.readFromDB(dbFile);
     }
     private void writeToDB(List<Member> list){
         try{
