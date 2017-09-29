@@ -16,14 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5645022">
+    <splitter split-orientation="horizontal" split-proportion="0.43858132">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/view/Console.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+                <state relative-caret-position="0">
+                  <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
                   <folding>
                     <element signature="docComment;class#Console#0" expanded="false" />
                     <element signature="e#477#490#0" expanded="false" />
@@ -36,8 +36,8 @@
           <file leaf-file-name="InputControl.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/view/InputControl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+                <state relative-caret-position="93">
+                  <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
                   <folding>
                     <element signature="docComment;class#InputControl#0" expanded="false" />
                     <element signature="method#InputControl#0;class#InputControl#0" expanded="false" />
@@ -63,8 +63,8 @@
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <state relative-caret-position="68">
+                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -75,14 +75,13 @@
           <file leaf-file-name="DBControl.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/registry/model/DBControl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+                <state relative-caret-position="280">
+                  <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
                   <folding>
                     <element signature="docComment;class#DBControl#0" expanded="false" />
-                    <element signature="method#memberExists#0;class#DBControl#0" expanded="false" />
                     <element signature="method#listMembersCompact#0;class#DBControl#0" expanded="false" />
                     <element signature="method#addMember#0;class#DBControl#0" expanded="false" />
-                    <element signature="e#1448#1522#0" expanded="false" />
+                    <element signature="e#1495#1569#0" expanded="false" />
                     <element signature="method#changeMemberInfo#0;class#DBControl#0" expanded="false" />
                     <element signature="method#deleteMember#0;class#DBControl#0" expanded="false" />
                     <element signature="method#addBoat#0;class#DBControl#0" expanded="false" />
@@ -90,8 +89,6 @@
                     <element signature="method#deleteBoat#0;class#DBControl#0" expanded="false" />
                     <element signature="method#getBoatsForMember#0;class#DBControl#0" expanded="false" />
                     <element signature="method#getPermittedBoatTypes#0;class#DBControl#0" expanded="false" />
-                    <element signature="method#getMember#0;class#DBControl#0" expanded="false" />
-                    <element signature="method#writeToDB#0;class#DBControl#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -100,21 +97,11 @@
           <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/model/Member.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="328">
-                  <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+                <state relative-caret-position="127">
+                  <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Boat.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/registry/model/Boat.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -126,8 +113,8 @@
           <file leaf-file-name="IDBControl.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/model/IDBControl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+                <state relative-caret-position="136">
+                  <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -135,15 +122,55 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PrintStrings_eng.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="PrintStrings_eng.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/registry/view/PrintStrings_eng.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="388">
-                  <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+                  <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
                   <folding>
                     <element signature="method#getHelp_msg#0;class#PrintStrings_eng#0" expanded="false" />
                     <element signature="method#printBoats#0;class#PrintStrings_eng#0" expanded="false" />
                     <element signature="method#errorMemberNoeExistMsg#0;class#PrintStrings_eng#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DBControl2.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/registry/model/DBControl2.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#331#332#0" expanded="true" />
+                    <element signature="e#365#366#0" expanded="true" />
+                    <element signature="e#402#403#0" expanded="true" />
+                    <element signature="e#431#432#0" expanded="true" />
+                    <element signature="e#476#477#0" expanded="true" />
+                    <element signature="e#513#514#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="InputControl2.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/registry/view/InputControl2.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="181">
+                  <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+                  <folding>
+                    <element signature="method#InputControl2#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#addMember#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#changeMemberInfo#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#addBoat#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#deleteBoat#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#changeBoatInfo#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#getMemberInfo#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#getMember#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#selectBoat#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#selectBoatType#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#validateBoatInput#0;class#InputControl2#0" expanded="false" />
+                    <element signature="method#validateIndex#0;class#InputControl2#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -204,7 +231,6 @@
         <option value="$PROJECT_DIR$/src/com/registry/model/M_dbWriter.java" />
         <option value="$PROJECT_DIR$/src/com/registry/model/M_dbReader.java" />
         <option value="$PROJECT_DIR$/src/com/registry/model/M_dbControl.java" />
-        <option value="$PROJECT_DIR$/src/com/registry/model/Boat.java" />
         <option value="$PROJECT_DIR$/src/com/registry/view/View_Console.java" />
         <option value="$PROJECT_DIR$/src/com/registry/model/DBReader.java" />
         <option value="$PROJECT_DIR$/src/com/registry/view/PrintStrings.java" />
@@ -215,7 +241,10 @@
         <option value="$PROJECT_DIR$/src/com/registry/model/DBWriter.java" />
         <option value="$PROJECT_DIR$/src/com/registry/model/Member.java" />
         <option value="$PROJECT_DIR$/src/com/registry/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/registry/model/Boat.java" />
+        <option value="$PROJECT_DIR$/src/com/registry/view/InputControl2.java" />
         <option value="$PROJECT_DIR$/src/com/registry/model/DBControl.java" />
+        <option value="$PROJECT_DIR$/src/com/registry/model/DBControl2.java" />
       </list>
     </option>
   </component>
@@ -246,6 +275,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,10 +315,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,12 +416,13 @@
       <workItem from="1506509034063" duration="3666000" />
       <workItem from="1506515720529" duration="5032000" />
       <workItem from="1506661782972" duration="6907000" />
-      <workItem from="1506684106184" duration="4172000" />
+      <workItem from="1506684106184" duration="4226000" />
+      <workItem from="1506689462547" duration="3225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116819000" />
+    <option name="totallyTimeSpent" value="120098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -410,7 +440,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15446559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15373352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -440,38 +470,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/registry/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/registry/view/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Console#0" expanded="false" />
-            <element signature="e#477#490#0" expanded="false" />
-            <element signature="method#populateInput#0;class#Console#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/model/DBControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#DBControl#0" expanded="false" />
-            <element signature="method#memberExists#0;class#DBControl#0" expanded="false" />
             <element signature="method#listMembersCompact#0;class#DBControl#0" expanded="false" />
             <element signature="method#addMember#0;class#DBControl#0" expanded="false" />
-            <element signature="e#1448#1522#0" expanded="false" />
+            <element signature="e#1495#1569#0" expanded="false" />
             <element signature="method#changeMemberInfo#0;class#DBControl#0" expanded="false" />
             <element signature="method#deleteMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#addBoat#0;class#DBControl#0" expanded="false" />
@@ -479,8 +486,6 @@
             <element signature="method#deleteBoat#0;class#DBControl#0" expanded="false" />
             <element signature="method#getBoatsForMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#getPermittedBoatTypes#0;class#DBControl#0" expanded="false" />
-            <element signature="method#getMember#0;class#DBControl#0" expanded="false" />
-            <element signature="method#writeToDB#0;class#DBControl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -553,10 +558,9 @@
           <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding>
             <element signature="docComment;class#DBControl#0" expanded="false" />
-            <element signature="method#memberExists#0;class#DBControl#0" expanded="false" />
             <element signature="method#listMembersCompact#0;class#DBControl#0" expanded="false" />
             <element signature="method#addMember#0;class#DBControl#0" expanded="false" />
-            <element signature="e#1448#1522#0" expanded="false" />
+            <element signature="e#1495#1569#0" expanded="false" />
             <element signature="method#changeMemberInfo#0;class#DBControl#0" expanded="false" />
             <element signature="method#deleteMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#addBoat#0;class#DBControl#0" expanded="false" />
@@ -564,8 +568,6 @@
             <element signature="method#deleteBoat#0;class#DBControl#0" expanded="false" />
             <element signature="method#getBoatsForMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#getPermittedBoatTypes#0;class#DBControl#0" expanded="false" />
-            <element signature="method#getMember#0;class#DBControl#0" expanded="false" />
-            <element signature="method#writeToDB#0;class#DBControl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,10 +637,9 @@
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#DBControl#0" expanded="false" />
-            <element signature="method#memberExists#0;class#DBControl#0" expanded="false" />
             <element signature="method#listMembersCompact#0;class#DBControl#0" expanded="false" />
             <element signature="method#addMember#0;class#DBControl#0" expanded="false" />
-            <element signature="e#1448#1522#0" expanded="false" />
+            <element signature="e#1495#1569#0" expanded="false" />
             <element signature="method#changeMemberInfo#0;class#DBControl#0" expanded="false" />
             <element signature="method#deleteMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#addBoat#0;class#DBControl#0" expanded="false" />
@@ -646,8 +647,6 @@
             <element signature="method#deleteBoat#0;class#DBControl#0" expanded="false" />
             <element signature="method#getBoatsForMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#getPermittedBoatTypes#0;class#DBControl#0" expanded="false" />
-            <element signature="method#getMember#0;class#DBControl#0" expanded="false" />
-            <element signature="method#writeToDB#0;class#DBControl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -666,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,19 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/registry/model/Boat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/view/IPrintStrings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
           <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/model/IDBControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -811,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/registry/view/PrintStrings_eng.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="method#getHelp_msg#0;class#PrintStrings_eng#0" expanded="false" />
             <element signature="method#printBoats#0;class#PrintStrings_eng#0" expanded="false" />
@@ -820,20 +808,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/registry/model/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/view/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding>
             <element signature="docComment;class#Console#0" expanded="false" />
             <element signature="e#477#490#0" expanded="false" />
@@ -844,8 +822,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/registry/model/Boat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/registry/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -854,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/view/InputControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="93">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
             <element signature="docComment;class#InputControl#0" expanded="false" />
             <element signature="method#InputControl#0;class#InputControl#0" expanded="false" />
@@ -877,16 +877,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/registry/view/InputControl2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="method#InputControl2#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#addMember#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#changeMemberInfo#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#addBoat#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#deleteBoat#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#changeBoatInfo#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#getMemberInfo#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#getMember#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#selectBoat#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#selectBoatType#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#validateBoatInput#0;class#InputControl2#0" expanded="false" />
+            <element signature="method#validateIndex#0;class#InputControl2#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/model/DBControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="280">
+          <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
           <folding>
             <element signature="docComment;class#DBControl#0" expanded="false" />
-            <element signature="method#memberExists#0;class#DBControl#0" expanded="false" />
             <element signature="method#listMembersCompact#0;class#DBControl#0" expanded="false" />
             <element signature="method#addMember#0;class#DBControl#0" expanded="false" />
-            <element signature="e#1448#1522#0" expanded="false" />
+            <element signature="e#1495#1569#0" expanded="false" />
             <element signature="method#changeMemberInfo#0;class#DBControl#0" expanded="false" />
             <element signature="method#deleteMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#addBoat#0;class#DBControl#0" expanded="false" />
@@ -894,8 +914,21 @@
             <element signature="method#deleteBoat#0;class#DBControl#0" expanded="false" />
             <element signature="method#getBoatsForMember#0;class#DBControl#0" expanded="false" />
             <element signature="method#getPermittedBoatTypes#0;class#DBControl#0" expanded="false" />
-            <element signature="method#getMember#0;class#DBControl#0" expanded="false" />
-            <element signature="method#writeToDB#0;class#DBControl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/registry/model/DBControl2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
           </folding>
         </state>
       </provider>
