@@ -36,6 +36,11 @@ public class DBReader {
     }
 
     @SuppressWarnings({ "unchecked", "null" })
+    /**
+     * Reading from the XML file.
+     * @dbFile path to the file
+     * return Arraylist representation of the members
+     */
     public List<Member> readFromDB(String dbFile){
         members = new ArrayList<>();
         //List<Member> items = new ArrayList<Member>();

@@ -15,16 +15,17 @@ import java.util.Scanner;
 public class InputControl {
 
     private final Scanner scan = new Scanner(System.in);
-    public PrintStrings print;
+    private IPrintStrings print;
     private DBControl m_DB;
     private Console console;
 
-    public InputControl(DBControl m_DB, Console console, PrintStrings print){
+    public InputControl(DBControl m_DB, Console console, IPrintStrings print){
         this.print = print;
         this.console = console;
         this.m_DB = m_DB;
     }
 
+    // Member methods
     public void listMembers(String str){
         if (str.equals("v")) {
             List members = m_DB.listMembersVerbose();
@@ -61,7 +62,7 @@ public class InputControl {
         getMemberInfo(id);
     }
 
-
+    // Boat Methods
     public void addBoat(){
         print.displayChangeMessage();
         int id = getID();
@@ -126,17 +127,17 @@ public class InputControl {
     }
     private String selectBoatType(int id){
 
-        for(int i = 0; i < m_DB.getPermittedTypes(id).size(); i++){
+        for(int i = 0; i < m_DB.getPermittedBoatTypes(id).size(); i++){
             System.out.print(i);
             print.displayIsEqualMsg();
-            System.out.print(m_DB.getPermittedTypes(id).get(i));
+            System.out.print(m_DB.getPermittedBoatTypes(id).get(i));
             System.out.println();
         }
         print.displayBoatTypeMsg();
         int num = validateBoatInput();
-        validateIndex(m_DB.getPermittedTypes(id), num);
+        validateIndex(m_DB.getPermittedBoatTypes(id), num);
 
-        String type = m_DB.getPermittedTypes(id).get(num);
+        String type = m_DB.getPermittedBoatTypes(id).get(num);
         return type;
 
     }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Class handling all printouts to the user.
  * Replace this class if language needs to be changed.
  */
-public class PrintStrings {
+public class PrintStrings_eng implements IPrintStrings {
 
 
    public void getMainMessage(){

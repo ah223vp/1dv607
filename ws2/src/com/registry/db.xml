@@ -59,11 +59,4 @@
 		<Boat>
 		</Boat>
 	</member>
-	<member>
-		<name>Spanish</name>
-		<p_number>12345</p_number>
-		<m_id>996</m_id>
-		<Boat>
-		</Boat>
-	</member>
 </Registry>

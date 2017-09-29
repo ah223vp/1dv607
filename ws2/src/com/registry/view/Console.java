@@ -12,13 +12,13 @@ public class Console {
 
     private DBControl m_DB;
     private InputControl inputControl;
-    private PrintStrings print;
+    private IPrintStrings print;
     private String c;
 
     private final Scanner scan = new Scanner(System.in);
 
     public Console(DBControl db){
-        print = new PrintStrings();
+        print = new PrintStrings_eng();
         m_DB = db;
         inputControl = new InputControl(m_DB, this, print);
     }

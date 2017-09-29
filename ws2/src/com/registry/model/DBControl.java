@@ -19,6 +19,8 @@ public class DBControl {
     public DBControl(){
         dbList = db_read.readFromDB(dbFile);
     }
+
+    // Member methods
     public Boolean memberExists(int id){
         for(Member member : dbList){
             int temp = Integer.parseInt(member.getM_id());
@@ -28,7 +30,6 @@ public class DBControl {
         }
         return false;
     }
-
     public List<Member> listMembersVerbose(){
         return dbList;
     }
@@ -52,21 +53,6 @@ public class DBControl {
         dbList.add(i);
         writeToDB(dbList);
     }
-    public void deleteBoat(int id, int boatIndex){
-        Member member = getMember(id);
-        member.removeBoat(boatIndex);
-        writeToDB(dbList);
-    }
-    public void changeBoatInfo(int id, int index, String type, String length){
-        Member member = getMember(id);
-        member.getBoats().get(index).setLength(length);
-        member.getBoats().get(index).setType(type);
-        writeToDB(dbList);
-    }
-    public ArrayList<Boat> getBoatsForMember(int id){
-        Member member = getMember(id);
-        return member.getBoats();
-    }
     public void changeMemberInfo(int memberId, String name, String p_number){
         Member member = getMember(memberId);
         if(!name.equals("")){
@@ -76,18 +62,6 @@ public class DBControl {
             member.setP_number(p_number);
         }
         writeToDB(dbList);
-    }
-
-    public void addBoat(int id, String type, String length){
-        Member member = getMember(id);
-
-        member.addBoat(type, length);
-
-        writeToDB(dbList);
-    }
-    public List<String> getPermittedTypes(int id){
-        Member member = getMember(id);
-        return member.getPermittedTypes();
     }
     public void deleteMember(int memberId){
         List<Member> list;
@@ -101,6 +75,36 @@ public class DBControl {
             }
         }
     }
+
+    // Boat Methods
+    public void addBoat(int id, String type, String length){
+        Member member = getMember(id);
+
+        member.addBoat(type, length);
+
+        writeToDB(dbList);
+    }
+    public void changeBoatInfo(int id, int index, String type, String length){
+        Member member = getMember(id);
+        member.getBoats().get(index).setLength(length);
+        member.getBoats().get(index).setType(type);
+        writeToDB(dbList);
+    }
+    public void deleteBoat(int id, int boatIndex){
+        Member member = getMember(id);
+        member.removeBoat(boatIndex);
+        writeToDB(dbList);
+    }
+    public ArrayList<Boat> getBoatsForMember(int id){
+        Member member = getMember(id);
+        return member.getBoats();
+    }
+    public List<String> getPermittedBoatTypes(int id){
+        Member member = getMember(id);
+        return member.getPermittedTypes();
+    }
+
+
     // Private methods below here.
     private Member getMember(int id){
         Member member = null;

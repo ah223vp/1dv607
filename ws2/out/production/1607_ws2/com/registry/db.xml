@@ -39,6 +39,8 @@
 		<p_number>123456</p_number>
 		<m_id>387</m_id>
 		<Boat>
+			<length>10</length>
+			<type>Motorsailer</type>
 		</Boat>
 	</member>
 	<member>

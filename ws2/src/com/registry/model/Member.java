@@ -60,6 +60,11 @@ public class Member {
     public void setBoatType(String type_boats) {
         this.type_boats = type_boats;
     }
+
+    /**
+     * Permitted types the user can select for a boat
+     * @return Arraylist with permitted types
+     */
     public List<String> getPermittedTypes(){
         return permittedBoatTypes;
     }
@@ -71,12 +76,23 @@ public class Member {
     public void addBoat(Boat boat){
         boats.add(boat);
     }
+
+    /**
+     * Adding new boat to the member
+     * @param type Type of boat, user select from permittedBoattypes
+     * @param length
+     */
     public void addBoat(String type, String length){
         Boat boat = new Boat();
         boat.setLength(length);
         boat.setType(type);
         boats.add(boat);
     }
+
+    /**
+     * Removes a boat from the member
+     * @param boatIndex Index in the boatlist to remove, user selects
+     */
     public void removeBoat(int boatIndex){
         boats.remove(boatIndex);
     }
