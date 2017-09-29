@@ -2,6 +2,7 @@ package com.registry;
 
 
 import com.registry.model.DBControl;
+import com.registry.model.IDBControl;
 import com.registry.view.Console;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
 
 
 
-        DBControl xC = new DBControl();
+        IDBControl xC = new DBControl();
         Console vC = new Console(xC);
         vC.getInput();
 

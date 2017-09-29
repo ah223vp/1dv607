@@ -8,7 +8,7 @@ import java.util.List;
  * @dbFile The file representing the Database.
  * dbList is updated after every write method has been called.
  */
-public class DBControl {
+public class DBControl implements IDBControl{
 
     private String dbFile = "src/com/registry/db.xml"; // File for debugging
     //private String dbFile = "./db.xml"; // File for .jar

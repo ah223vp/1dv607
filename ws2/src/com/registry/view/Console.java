@@ -1,6 +1,6 @@
 package com.registry.view;
 
-import com.registry.model.DBControl;
+import com.registry.model.IDBControl;
 
 import java.util.Scanner;
 
@@ -10,17 +10,18 @@ import java.util.Scanner;
  */
 public class Console {
 
-    private DBControl m_DB;
+    //private DBControl m_DB;
     private InputControl inputControl;
     private IPrintStrings print;
     private String c;
 
     private final Scanner scan = new Scanner(System.in);
 
-    public Console(DBControl db){
+    public Console(IDBControl db){
         print = new PrintStrings_eng();
-        m_DB = db;
-        inputControl = new InputControl(m_DB, this, print);
+       // m_DB = db;
+        // Dependency or association this way?
+        inputControl = new InputControl(db, this, print);
     }
     private String populateInput(){
         print.getMainMessage();

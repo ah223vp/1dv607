@@ -1,7 +1,8 @@
 package com.registry.view;
 
 
-import com.registry.model.DBControl;
+//import com.registry.model.DBControl;
+import com.registry.model.IDBControl;
 
 
 import java.util.ArrayList;
@@ -16,10 +17,10 @@ public class InputControl {
 
     private final Scanner scan = new Scanner(System.in);
     private IPrintStrings print;
-    private DBControl m_DB;
+    private IDBControl m_DB;
     private Console console;
 
-    public InputControl(DBControl m_DB, Console console, IPrintStrings print){
+    public InputControl(IDBControl m_DB, Console console, IPrintStrings print){
         this.print = print;
         this.console = console;
         this.m_DB = m_DB;
