@@ -19,7 +19,7 @@ public class DBControl implements IDBControl{
     public DBControl(){
         dbList = db_read.readFromDB(dbFile);
     }
-
+    
     // Member methods
     public Boolean memberExists(int id){
         for(Member member : dbList){

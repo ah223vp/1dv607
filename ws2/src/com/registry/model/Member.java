@@ -97,6 +97,8 @@ public class Member {
         boats.remove(boatIndex);
     }
 
+
+    // Ta bort detta!!!!! Inte okej.
     @Override
     public String toString() {
         return "Member [ " + name + " , p_number = " + p_number + ", m_id = " + m_id + "\n"
