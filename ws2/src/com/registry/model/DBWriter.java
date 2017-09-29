@@ -83,7 +83,7 @@ public class DBWriter {
     }
 
     /**
-     * Create Member XML element
+     * Create MemberXMLelement
      * @param eventWriter
      * @param name
      * @param p_number
