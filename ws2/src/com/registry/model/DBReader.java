@@ -92,7 +92,7 @@ public class DBReader {
                     if (event.asStartElement().getName().getLocalPart()
                             .equals(M_ID)) {
                         event = eventReader.nextEvent();
-                        member.setM_id(event.asCharacters().getData());
+                        member.setM_id(Integer.parseInt(event.asCharacters().getData()));
                         continue;
                     }
 
@@ -117,7 +117,7 @@ public class DBReader {
                         event = eventReader.nextEvent();
                         type = event.asCharacters().getData();
 
-                        member.addBoat(type, temp.get(0));
+                        member.addBoat(type, Double.parseDouble(temp.get(0)));
                         temp.clear();
                         continue;
                     }

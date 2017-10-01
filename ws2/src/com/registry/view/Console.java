@@ -1,5 +1,6 @@
 package com.registry.view;
 
+import com.registry.model.DBControl2;
 import com.registry.model.IDBControl;
 
 import java.util.Scanner;
@@ -11,17 +12,18 @@ import java.util.Scanner;
 public class Console {
 
     //private DBControl m_DB;
-    private InputControl inputControl;
+    //private InputControl inputControl;
+    private InputControl2 inputControl;
     private IPrintStrings print;
     private String c;
 
     private final Scanner scan = new Scanner(System.in);
 
-    public Console(IDBControl db){
+    public Console(DBControl2 db){
         print = new PrintStrings_eng();
        // m_DB = db;
         // Dependency or association this way?
-        inputControl = new InputControl(db, this, print);
+        inputControl = new InputControl2(db, this, print);
     }
     private String populateInput(){
         print.getMainMessage();
@@ -33,9 +35,9 @@ public class Console {
 
         // Add commands here, search login logout
         if (c.equals("list -v")) {
-            inputControl.listMembers("v");
+            inputControl.getMembers();
         } else if (c.equals("list -c")) {
-            inputControl.listMembers("c");
+            //inputControl.listMembers("c");
         } else if (c.equals("add -m")) {
             inputControl.addMember();
         } else if(c.equals("add -b")){
@@ -45,7 +47,7 @@ public class Console {
         } else if (c.equals("delete -b")){
             inputControl.deleteBoat();
         } else if (c.equals("look")) {
-            inputControl.listMember();
+            //inputControl.listMember();
         } else if (c.equals("change -m")) {
             inputControl.changeMemberInfo();
         } else if (c.equals("change -b")) {

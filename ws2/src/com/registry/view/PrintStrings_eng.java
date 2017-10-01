@@ -80,5 +80,8 @@ public class PrintStrings_eng implements IPrintStrings {
    public void errorIndex(){
        System.out.println("Specified entity does not exist");
    }
+   public void errorDoubleInput(){
+       System.out.println("Invalid input, length can´t be 0 or negative");
+   }
 
 }

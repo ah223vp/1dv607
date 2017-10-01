@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registry>
+	<member>
+		<name>AntonFjanton111</name>
+		<p_number>111111111</p_number>
+		<m_id>3</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>Hanna</name>
+		<p_number>123131</p_number>
+		<m_id>396</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>ApanBanarne</name>
+		<p_number>a</p_number>
+		<m_id>215</m_id>
+		<Boat>
+			<length>20.0</length>
+			<type>Sailboat</type>
+			<length>500.0</length>
+			<type>Motorsailer</type>
+			<length>10.0</length>
+			<type>Kayak/Canoe</type>
+		</Boat>
+	</member>
+	<member>
+		<name>hepphepp</name>
+		<p_number>123135</p_number>
+		<m_id>325</m_id>
+		<Boat>
+		</Boat>
+	</member>
+	<member>
+		<name>andreas</name>
+		<p_number>2123123</p_number>
+		<m_id>326</m_id>
+		<Boat>
+		</Boat>
+	</member>
+</Registry>

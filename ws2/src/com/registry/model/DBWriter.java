@@ -93,7 +93,7 @@ public class DBWriter {
      * @param member
      * @throws Exception
      */
-    private void createMemberElement(XMLEventWriter eventWriter, String name, String p_number, String m_id
+    private void createMemberElement(XMLEventWriter eventWriter, String name, String p_number, int m_id
     , String n_boats, String type_boats, Member member) throws Exception{
         createNode(eventWriter, "name", name);
         createNode(eventWriter, "p_number", p_number);
@@ -158,6 +158,46 @@ public class DBWriter {
         eventWriter.add(sElement);
         // create Content
         Characters characters = eventFactory.createCharacters(value);
+        eventWriter.add(characters);
+        // create End node
+        EndElement eElement = eventFactory.createEndElement("", "", name);
+        eventWriter.add(eElement);
+        eventWriter.add(end);
+
+    }
+    private void createNode(XMLEventWriter eventWriter, String name,
+                            int value) throws XMLStreamException {
+
+        XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+        XMLEvent end = eventFactory.createDTD("\n");
+        XMLEvent tab = eventFactory.createDTD("\t");
+        // create Start node
+        StartElement sElement = eventFactory.createStartElement("", "", name);
+        eventWriter.add(tab);
+        eventWriter.add(tab);
+        eventWriter.add(sElement);
+        // create Content
+        Characters characters = eventFactory.createCharacters(Integer.toString(value));
+        eventWriter.add(characters);
+        // create End node
+        EndElement eElement = eventFactory.createEndElement("", "", name);
+        eventWriter.add(eElement);
+        eventWriter.add(end);
+
+    }
+    private void createNode(XMLEventWriter eventWriter, String name,
+                            Double value) throws XMLStreamException {
+
+        XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+        XMLEvent end = eventFactory.createDTD("\n");
+        XMLEvent tab = eventFactory.createDTD("\t");
+        // create Start node
+        StartElement sElement = eventFactory.createStartElement("", "", name);
+        eventWriter.add(tab);
+        eventWriter.add(tab);
+        eventWriter.add(sElement);
+        // create Content
+        Characters characters = eventFactory.createCharacters(Double.toString(value));
         eventWriter.add(characters);
         // create End node
         EndElement eElement = eventFactory.createEndElement("", "", name);

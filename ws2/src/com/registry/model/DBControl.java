@@ -8,7 +8,7 @@ import java.util.List;
  * @dbFile The file representing the Database.
  * dbList is updated after every write method has been called.
  */
-public class DBControl implements IDBControl{
+public class DBControl{
 
     private String dbFile = "src/com/registry/db.xml"; // File for debugging
     //private String dbFile = "./db.xml"; // File for .jar
@@ -23,7 +23,7 @@ public class DBControl implements IDBControl{
     // Member methods
     public Boolean memberExists(int id){
         for(Member member : dbList){
-            int temp = Integer.parseInt(member.getM_id());
+            int temp = member.getM_id();
             if(temp == id){
                 return true;
             }
@@ -50,7 +50,7 @@ public class DBControl implements IDBControl{
         i.setP_number(p_number);
         // The setM_id can be made a million times better but for this app I think
         //it is sufficient
-        i.setM_id(Integer.toString((int)Math.round(Math.random() * 1000)));
+        //i.setM_id(Math.round(Math.random() * 1000));
         dbList.add(i);
         writeToDB(dbList);
     }
@@ -67,18 +67,19 @@ public class DBControl implements IDBControl{
     public void deleteMember(int memberId){
         List<Member> list;
         list = listMembersVerbose();
-
+        /*
         for (Member i : list){
-            if(Integer.parseInt(i.getM_id()) == memberId){
+            if(i.getM_id()) == memberId){
                 list.remove(i);
                 writeToDB(list);
                 break;
             }
         }
+        */
     }
 
     // Boat Methods
-    public void addBoat(int id, String type, String length){
+    public void addBoat(int id, String type, Double length){
         Member member = getMember(id);
 
         member.addBoat(type, length);
@@ -87,7 +88,7 @@ public class DBControl implements IDBControl{
     }
     public void changeBoatInfo(int id, int index, String type, String length){
         Member member = getMember(id);
-        member.getBoats().get(index).setLength(length);
+        //member.getBoats().get(index).setLength(length);
         member.getBoats().get(index).setType(type);
         writeToDB(dbList);
     }
@@ -110,7 +111,7 @@ public class DBControl implements IDBControl{
     private Member getMember(int id){
         Member member = null;
         for(Member item : dbList){
-            int temp = Integer.parseInt(item.getM_id());
+            int temp = item.getM_id();
             if(temp == id){
                 member = item;
             }

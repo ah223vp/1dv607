@@ -11,19 +11,25 @@ import java.util.List;
  */
 public class Boat {
 
-    private String length;
+    private Double length;
     private String type;
     private List<String> permittedBoatTypes = Arrays.asList(
             "Kayak/Canoe", "Sailboat", "Motorsailer", "Other"
     );
 
 
-    public String getLength() {
+    public Double getLength() {
         return length;
     }
 
-    public void setLength(String length) {
-        this.length = length;
+    public Boolean setLength(Double length) {
+        if(length == 0 || length < 0){
+            return false;
+        }else {
+            this.length = length;
+            return true;
+        }
+
     }
 
 

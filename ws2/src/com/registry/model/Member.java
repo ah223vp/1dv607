@@ -13,7 +13,7 @@ public class Member {
 
     private String name;
     private String p_number;
-    private String m_id;
+    private int m_id;
     private String n_boats;
     private String type_boats;
     private ArrayList<Boat> boats = new ArrayList<Boat>();
@@ -37,11 +37,11 @@ public class Member {
         this.p_number = p_number;
     }
 
-    public String getM_id() {
+    public int getM_id() {
         return m_id;
     }
 
-    public void setM_id(String m_id) {
+    public void setM_id(int m_id) {
         this.m_id = m_id;
     }
 
@@ -82,7 +82,7 @@ public class Member {
      * @param type Type of boat, user select from permittedBoattypes
      * @param length
      */
-    public void addBoat(String type, String length){
+    public void addBoat(String type, Double length){
         Boat boat = new Boat();
         boat.setLength(length);
         boat.setType(type);
@@ -95,6 +95,9 @@ public class Member {
      */
     public void removeBoat(int boatIndex){
         boats.remove(boatIndex);
+    }
+    public void removeBoat(Boat boat){
+        boats.remove(boat);
     }
 
 

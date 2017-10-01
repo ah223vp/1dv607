@@ -4,6 +4,7 @@ import com.registry.model.Boat;
 import com.registry.model.DBControl2;
 import com.registry.model.IDBControl;
 import com.registry.model.Member;
+import org.omg.CosNaming.NamingContextPackage.NotFound;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,13 +18,19 @@ public class InputControl2 {
     private DBControl2 m_DB;
     private Console console;
 
-    public InputControl2(IDBControl m_DB, Console console, IPrintStrings print){
+    public InputControl2(DBControl2 m_DB, Console console, IPrintStrings print){
         this.print = print;
         this.console = console;
         this.m_DB = m_DB;
     }
 
     // Member methods
+    public void getMembers(){
+        List<Member> members = m_DB.getMembers();
+        for(Member m : members){
+            System.out.println(m);
+        }
+    }
     public void deleteMember(){
         Member member = getMember();
         m_DB.deleteMember(member);
@@ -46,9 +53,12 @@ public class InputControl2 {
         String type = selectBoatType(boat);
         boat.setType(type);
         print.displayBoatLengthMsg();
-        Double length = scan.nextDouble();
-        // change in dbControl.member.boat
-        boat.setLength(length);
+        Double length = getDoubleInput();
+
+        if(!boat.setLength(length)){
+            print.errorLength();
+            return;
+        }
         member.addBoat(boat);
         m_DB.saveMember(member);
         // print types
@@ -67,16 +77,17 @@ public class InputControl2 {
 
         Boat boat = selectBoat(member);
         String type = selectBoatType(boat);
-        boat.setType(type);
-        print.displayBoatLengthMsg();
-        Double length = scan.nextDouble();
 
-        // Cahnge later, input is String in boat
-        boat.setLength(length);
-        if(length.equals("0")){
+        print.displayBoatLengthMsg();
+        Double length = getDoubleInput();
+
+        if(!boat.setLength(length)){
             print.errorLength();
             return;
         }
+        boat.setType(type);
+
+
         m_DB.saveMember(member);
     }
 
@@ -93,11 +104,12 @@ public class InputControl2 {
     }
     private Member getMember(){
         int id = -1;
+       Member member = null;
         try{
             id = scan.nextInt();
             scan.nextLine();
             if(m_DB.memberExists(id)){
-                return m_DB.getMember();
+                member = m_DB.getMember(id);
             }else {
                 print.errorMemberNoeExistMsg();
                 console.getInput();
@@ -108,7 +120,8 @@ public class InputControl2 {
             print.errorIntInput();
             console.getInput();
         }
-        //return member;
+
+        return member;
     }
     private Boat selectBoat(Member member){
         ArrayList boats = member.getBoats();
@@ -158,5 +171,19 @@ public class InputControl2 {
             print.errorIndex();
             console.getInput();
         }
+    }
+    private Double getDoubleInput(){
+        Double dbl = null;
+        try{
+            dbl = scan.nextDouble();
+            scan.nextLine();
+            return dbl;
+        }catch(Exception e){
+            scan.nextLine();
+            print.errorDoubleInput();
+            console.getInput();
+        }
+        return dbl;
+
     }
 }
