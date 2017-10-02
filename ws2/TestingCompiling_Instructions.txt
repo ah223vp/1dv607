@@ -1,0 +1,12 @@
+To run the application via the .jar file:
+
+You need a java runtime installed on your machine the run or test the .jar file or compile the project.
+
+Download from http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+
+Easiest is to use the cmd and cd into the Runnable folder.
+In there type: java.exe -jar 1607_ws2.jar and the program should run.
+
+
+
+To compile the project open you IDE and open the project from the SourceCode folder. From there just compile from the Main class.
