@@ -1,10 +1,10 @@
 package com.registry.model;
 
-import org.omg.CosNaming.NamingContextPackage.NotFound;
+
 
 import java.util.List;
 
-public class DBControl2 {
+public class DBControl2 implements IDBControl {
 
     private String dbFile = "src/com/registry/db2.xml"; // File for debugging
     //private String dbFile = "./db.xml"; // File for .jar
@@ -20,18 +20,10 @@ public class DBControl2 {
     public List<Member> getMembers(){
         return dbList;
     }
-    public void saveMember(Member newMember){
-        /*
-        Member member = dbList.get(member);
-        member = newMember;
-        try{
-            writeToFile(dbList);
-            updateDBFile();
-        }catch(Exception e){ }
-        */
+    public void saveMember(){
+
         writeToFile(dbList);
     }
-
     public void addMember(Member member){
         int uniqueId = dbList.get(dbList.size()-1).getM_id();
         uniqueId++;
@@ -48,7 +40,7 @@ public class DBControl2 {
         }
         return member;
     }
-    public Boolean memberExists(int id){
+    public boolean memberExists(int id){
 
         for(Member member : dbList){
             if(member.getM_id() == id){
@@ -61,6 +53,8 @@ public class DBControl2 {
         dbList.remove(member);
         writeToFile(dbList);
     }
+
+    // Private methods
     private void updateDBFile(){
         dbList = db_read.readFromDB(dbFile);
     }

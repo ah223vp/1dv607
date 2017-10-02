@@ -1,10 +1,8 @@
 package com.registry.view;
 
 import com.registry.model.Boat;
-import com.registry.model.DBControl2;
 import com.registry.model.IDBControl;
 import com.registry.model.Member;
-import org.omg.CosNaming.NamingContextPackage.NotFound;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,25 +11,20 @@ import java.util.Scanner;
 public class InputControl2 {
 
     private final Scanner scan = new Scanner(System.in);
+
     private IPrintStrings print;
-    //private IDBControl m_DB;
-    private DBControl2 m_DB;
+    private IDBControl m_DB;
     private Console console;
 
-    public InputControl2(DBControl2 m_DB, Console console, IPrintStrings print){
+    public InputControl2(IDBControl m_DB, Console console, IPrintStrings print){
         this.print = print;
         this.console = console;
         this.m_DB = m_DB;
     }
 
     // Member methods
-    public void getMembers(){
-        List<Member> members = m_DB.getMembers();
-        for(Member m : members){
-            System.out.println(m);
-        }
-    }
     public void deleteMember(){
+        print.displayDeleteMessage();
         Member member = getMember();
         m_DB.deleteMember(member);
     }
@@ -41,26 +34,45 @@ public class InputControl2 {
         m_DB.addMember(member);
     }
     public void changeMemberInfo(){
+        print.displayChangeMessage();
         Member member = getMember();
         getMemberInfo(member);
-        m_DB.saveMember(member);
+        m_DB.saveMember();
+    }
+    public void displayMember(){
+        print.displaySeeMemberMsg();
+        Member member = getMember();
+        printMember(member);
+    }
+    public void displayMembers(String listType){
+        if(listType.equals("v")){
+            for(Member m : m_DB.getMembers()){
+                printMember(m);
+            }
+        }else {
+            for(Member m : m_DB.getMembers()){
+                System.out.println("Member: " + m.getName() + " , " + "M_id =" + m.getM_id() + " , " + "NoBoats: " + m.getN_boats());
+            }
+        }
+
     }
 
     // Boat Methods
     public void addBoat(){
+        print.displayChangeMessage();
         Member member = getMember();
         Boat boat = new Boat();
         String type = selectBoatType(boat);
-        boat.setType(type);
+       // boat.setType(type);
         print.displayBoatLengthMsg();
         Double length = getDoubleInput();
 
-        if(!boat.setLength(length)){
+        if(!boat.setLength(length) || !boat.setType(type)){
             print.errorLength();
             return;
         }
         member.addBoat(boat);
-        m_DB.saveMember(member);
+        m_DB.saveMember();
         // print types
 
     }
@@ -69,7 +81,7 @@ public class InputControl2 {
         Member member = getMember();
         Boat boat = selectBoat(member);
         member.removeBoat(boat);
-        m_DB.saveMember(member);
+        m_DB.saveMember();
     }
     public void changeBoatInfo(){
         print.displayChangeMessage();
@@ -88,26 +100,32 @@ public class InputControl2 {
         boat.setType(type);
 
 
-        m_DB.saveMember(member);
+        m_DB.saveMember();
     }
 
     // Private methods below
     private Member getMemberInfo(Member member){
+        scan.reset();
         print.displayNameMsg();
         String name = scan.nextLine();
-        member.setName(name);
-
+        //member.setName(name);
         print.displayP_NumberMsg();
-        String p_number = scan.nextLine();
-        member.setP_number(p_number);
+        int p_number = getIntInput();
+        //member.setP_number(p_number);
+        if (!member.setName(name) || !member.setP_number(p_number)) {
+            print.errorFaultyP_Number();
+            console.getInput();
+        }
         return member;
     }
     private Member getMember(){
         int id = -1;
        Member member = null;
+        scan.useDelimiter("\n");
         try{
             id = scan.nextInt();
             scan.nextLine();
+
             if(m_DB.memberExists(id)){
                 member = m_DB.getMember(id);
             }else {
@@ -116,6 +134,7 @@ public class InputControl2 {
             }
 
         }catch(Exception e){
+
             scan.nextLine();
             print.errorIntInput();
             console.getInput();
@@ -131,7 +150,7 @@ public class InputControl2 {
         }
         print.printBoats(boats);
         print.displayBoatNmrMsg();
-        int selection = validateBoatInput();
+        int selection = getIntInput();
 
         validateIndex(boats, selection);
         return member.getBoats().get(selection);
@@ -144,22 +163,26 @@ public class InputControl2 {
             System.out.println();
         }
         print.displayBoatTypeMsg();
-        int selection = validateBoatInput();
+        int selection = getIntInput();
         validateIndex(boat.getPermittedBoatTypes(), selection);
 
         String type = boat.getPermittedBoatTypes().get(selection);
         return type;
     }
-    private int validateBoatInput(){
+    private int getIntInput(){
+
         int index = -1;
+        scan.useDelimiter("\n");
         try{
             index = scan.nextInt();
             scan.nextLine();
         }catch(Exception e){
+           // scan.reset();
             print.errorIntInput();
             scan.nextLine();
             console.getInput();
         }
+       // scan.reset();
         return index;
     }
     private void validateIndex(List array, int index){
@@ -169,21 +192,39 @@ public class InputControl2 {
             }
         }catch(Exception e){
             print.errorIndex();
+            scan.nextLine();
             console.getInput();
         }
     }
     private Double getDoubleInput(){
-        Double dbl = null;
+        double dbl = -1;
+        scan.useDelimiter("\n");
         try{
             dbl = scan.nextDouble();
             scan.nextLine();
-            return dbl;
+
         }catch(Exception e){
+           // scan.reset();
             scan.nextLine();
+            if(dbl == -1){
+                return dbl;
+            }
+
             print.errorDoubleInput();
             console.getInput();
         }
+        //scan.reset();
         return dbl;
+    }
+    private void printMember(Member member){
+
+        System.out.print("Member: " + member.getName() + "\n"+ "\t" + "Info: " +"SocialSecNum = " + member.getP_number()
+                + ", M_id = " + member.getM_id() + "\n" + "\t" + "Boats(" + member.getN_boats() +"): ");
+        for(Boat b : member.getBoats()){
+            System.out.print(" |" + b.getType() + " , " + b.getLength() +" m"+ "| ");
+        }
+        System.out.println();
 
     }
+
 }

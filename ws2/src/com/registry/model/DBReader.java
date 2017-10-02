@@ -85,7 +85,7 @@ public class DBReader {
                         if (event.asStartElement().getName().getLocalPart()
                                 .equals(P_NUMBER)) {
                             event = eventReader.nextEvent();
-                            member.setP_number(event.asCharacters().getData());
+                            member.setP_number(Integer.parseInt(event.asCharacters().getData()));
                             continue;
                         }
                     }

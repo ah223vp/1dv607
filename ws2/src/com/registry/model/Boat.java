@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Boat {
 
-    private Double length;
+    private double length;
     private String type;
     private List<String> permittedBoatTypes = Arrays.asList(
             "Kayak/Canoe", "Sailboat", "Motorsailer", "Other"
@@ -22,33 +22,43 @@ public class Boat {
         return length;
     }
 
-    public Boolean setLength(Double length) {
-        if(length == 0 || length < 0){
+    public Boolean setLength(double length) {
+
+        if(this.length == 0 && length == -1 ){
             return false;
         }else {
-            this.length = length;
+            if(length == -1 || length <= 0){
+
+            }else {
+                this.length = length;
+            }
             return true;
         }
 
     }
-
-
     public String getType() {
         return type;
     }
 
 
-    public void setType(String type) {
-        this.type = type;
+    public Boolean setType(String type) {
+
+        if(this.type == null && type.length() == 0){
+            // Keeps addMember from inputting empty field.
+            return false;
+        }else {
+            if(type.length() == 0){
+                // Do nothing and keep name the same.
+            }else {
+                this.type = type;
+            }
+            return true;
+
+        }
     }
      public List<String> getPermittedBoatTypes(){
         return permittedBoatTypes;
      }
 
 
-    // Change this!!!!!!!!!!!!
-    @Override
-    public String toString(){
-        return "[" + type + " , " + length + " m" + "]";
-    }
 }

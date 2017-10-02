@@ -34,6 +34,7 @@ public class DBControl{
     public List<Member> listMembersVerbose(){
         return dbList;
     }
+    /*
     public List listMembersCompact(){
         List<String> list = new ArrayList<>();
         for(Member m : dbList){
@@ -41,10 +42,11 @@ public class DBControl{
         }
         return list;
     }
+    */
     public Member listMember(int memberId){
         return getMember(memberId);
     }
-    public void addMember(String name, String p_number){
+    public void addMember(String name, int p_number){
         Member i = new Member();
         i.setName(name);
         i.setP_number(p_number);
@@ -54,12 +56,12 @@ public class DBControl{
         dbList.add(i);
         writeToDB(dbList);
     }
-    public void changeMemberInfo(int memberId, String name, String p_number){
+    public void changeMemberInfo(int memberId, String name, int p_number){
         Member member = getMember(memberId);
         if(!name.equals("")){
             member.setName(name);
         }
-        if(!p_number.equals("")){
+        if(true){
             member.setP_number(p_number);
         }
         writeToDB(dbList);

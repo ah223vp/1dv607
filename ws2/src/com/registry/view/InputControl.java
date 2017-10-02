@@ -2,6 +2,7 @@ package com.registry.view;
 
 
 //import com.registry.model.DBControl;
+import com.registry.model.DBControl;
 import com.registry.model.IDBControl;
 
 
@@ -17,16 +18,17 @@ public class InputControl {
 
     private final Scanner scan = new Scanner(System.in);
     private IPrintStrings print;
-    private IDBControl m_DB;
+    private DBControl m_DB;
     private Console console;
 
-    public InputControl(IDBControl m_DB, Console console, IPrintStrings print){
+    public InputControl(DBControl m_DB, Console console, IPrintStrings print){
         this.print = print;
         this.console = console;
         this.m_DB = m_DB;
     }
 
     // Member methods
+    /*
     public void listMembers(String str){
         if (str.equals("v")) {
             List members = m_DB.listMembersVerbose();
@@ -184,4 +186,5 @@ public class InputControl {
             console.getInput();
         }
     }
+    */
 }

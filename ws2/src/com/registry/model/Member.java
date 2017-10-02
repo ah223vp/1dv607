@@ -12,11 +12,12 @@ import java.util.Arrays;
 public class Member {
 
     private String name;
-    private String p_number;
+    private int p_number;
     private int m_id;
     private String n_boats;
     private String type_boats;
     private ArrayList<Boat> boats = new ArrayList<Boat>();
+    private int p_numberLength = 10;
     private List<String> permittedBoatTypes = Arrays.asList(
             "Kayak/Canoe", "Sailboat", "Motorsailer", "Other"
     );
@@ -25,16 +26,43 @@ public class Member {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Boolean setName(String name) {
+
+        if(this.name == null && name.length() == 0){
+            // Keeps addMember from inputting empty field.
+            return false;
+        }else {
+            if(name.length() == 0){
+                // Do nothing and keep name the same.
+            }else {
+                this.name = name;
+            }
+            return true;
+
+        }
     }
 
-    public String getP_number() {
+    public int getP_number() {
         return p_number;
     }
 
-    public void setP_number(String p_number) {
-        this.p_number = p_number;
+    public Boolean setP_number(int p_number) {
+
+        // Checking value and length of number for simple validation
+        if(this.p_number == 0 && p_number == -1 || Integer.toString(p_number).length() < p_numberLength ||
+                Integer.toString(p_number).length() > p_numberLength){
+            // Keeps addMember from inputting empty field.
+            return false;
+        }else {
+
+            if(p_number == -1 ){
+                // Do nothing and keep name the same.
+            }else {
+                this.p_number = p_number;
+            }
+            return true;
+
+        }
     }
 
     public int getM_id() {
@@ -100,15 +128,4 @@ public class Member {
         boats.remove(boat);
     }
 
-
-    // Ta bort detta!!!!! Inte okej.
-    @Override
-    public String toString() {
-        return "Member [ " + name + " , p_number = " + p_number + ", m_id = " + m_id + "\n"
-                + "\t" + "Boats: " + boats;
-    }
-
-    public String compactList() {
-        return "Member [name=" + name + ", m_id=" + m_id + ", n_boats=" + getN_boats() + "]";
-    }
 }

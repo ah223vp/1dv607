@@ -93,7 +93,7 @@ public class DBWriter {
      * @param member
      * @throws Exception
      */
-    private void createMemberElement(XMLEventWriter eventWriter, String name, String p_number, int m_id
+    private void createMemberElement(XMLEventWriter eventWriter, String name, int p_number, int m_id
     , String n_boats, String type_boats, Member member) throws Exception{
         createNode(eventWriter, "name", name);
         createNode(eventWriter, "p_number", p_number);

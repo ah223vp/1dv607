@@ -36,7 +36,7 @@ public class PrintStrings_eng implements IPrintStrings {
        System.out.print("Name: ");
    }
    public void displayP_NumberMsg(){
-       System.out.print("Personal Number: ");
+       System.out.print("Personal Number (YYMMDDXXXX): ");
    }
    public void displayBoatNmrMsg(){
        System.out.print("Boat Number: ");
@@ -82,6 +82,9 @@ public class PrintStrings_eng implements IPrintStrings {
    }
    public void errorDoubleInput(){
        System.out.println("Invalid input, length can´t be 0 or negative");
+   }
+   public void errorFaultyP_Number(){
+       System.out.println("Invalid Social Security Number. Format: YYMMDDXXXX ");
    }
 
 }

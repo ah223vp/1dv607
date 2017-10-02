@@ -26,5 +26,6 @@ public interface IPrintStrings {
     void errorIntInput();
     void errorIndex();
     void errorDoubleInput();
+    void errorFaultyP_Number();
 
 }
