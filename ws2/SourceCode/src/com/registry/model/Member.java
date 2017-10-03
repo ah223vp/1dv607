@@ -75,6 +75,10 @@ public class Member {
         return Integer.toString(boats.size());
     }
 
+    public Boat getBoatObject(){
+        return new Boat();
+    }
+
     public void setN_boats(String n_boats) {
         this.n_boats = n_boats;
     }

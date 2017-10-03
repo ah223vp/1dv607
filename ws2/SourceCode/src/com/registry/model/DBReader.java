@@ -29,7 +29,6 @@ public class DBReader {
     private final String TYPE = "type";
     private String dbFile;
 
-    public List<Member> members = new ArrayList<Member>();
 
     public DBReader(String dbFile){
         this.dbFile = dbFile;
@@ -42,7 +41,7 @@ public class DBReader {
      * return members representation of the members
      */
     public List<Member> readFromDB(String dbFile){
-        members = new ArrayList<>();
+        List<Member> members = new ArrayList<>();
         //List<Member> items = new ArrayList<Member>();
         try {
             // First, create a new XMLInputFactory

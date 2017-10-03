@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Main entry for handling the input actions. When an action fails for some reason
+ * the getInput in console is called.
+ *
+ * Sparsly commented but that is due to the simplicity of the methods. Their
+ * names are what they do.
+ */
 public class InputControl {
 
     private final Scanner scan = new Scanner(System.in);
@@ -51,6 +58,7 @@ public class InputControl {
                 printMember(m);
             }
         }else {
+            // Move to a print method
             for(Member m : m_DB.getMembers()){
                 System.out.println("Member: " + m.getName() + " , " + "M_id =" + m.getM_id() + " , " + "NoBoats: " + m.getN_boats());
             }
@@ -61,9 +69,10 @@ public class InputControl {
     public void addBoat(){
         print.displayChangeMessage();
         Member member = getMember();
-        Boat boat = new Boat();
+        // Creating boat in Member class
+        Boat boat = member.getBoatObject();
         String type = selectBoatType(boat);
-       // boat.setType(type);
+
         print.displayBoatLengthMsg();
         Double length = getDoubleInput();
 
@@ -73,7 +82,7 @@ public class InputControl {
         }
         member.addBoat(boat);
         m_DB.saveMember();
-        // print types
+
 
     }
     public void deleteBoat(){
@@ -93,13 +102,12 @@ public class InputControl {
         print.displayBoatLengthMsg();
         Double length = getDoubleInput();
 
+        // Error handling in the boatClass
         if(!boat.setLength(length)){
             print.errorLength();
             return;
         }
         boat.setType(type);
-
-
         m_DB.saveMember();
     }
 
@@ -108,10 +116,11 @@ public class InputControl {
         scan.reset();
         print.displayNameMsg();
         String name = scan.nextLine();
-        //member.setName(name);
+
         print.displayP_NumberMsg();
         int p_number = getIntInput();
-        //member.setP_number(p_number);
+
+        // Error handling in the member class
         if (!member.setName(name) || !member.setP_number(p_number)) {
             print.errorFaultyP_Number();
             console.getInput();
@@ -121,11 +130,11 @@ public class InputControl {
     private Member getMember(){
         int id = -1;
        Member member = null;
+       // Needed to break command if user try to have the line blank.
         scan.useDelimiter("\n");
         try{
             id = scan.nextInt();
             scan.nextLine();
-
             if(m_DB.memberExists(id)){
                 member = m_DB.getMember(id);
             }else {
@@ -134,14 +143,18 @@ public class InputControl {
             }
 
         }catch(Exception e){
-
             scan.nextLine();
             print.errorIntInput();
             console.getInput();
         }
-
         return member;
     }
+
+    /**
+     * Selects a boat from a promted list
+     * @param member The member to select from
+     * @return Boat object
+     */
     private Boat selectBoat(Member member){
         ArrayList boats = member.getBoats();
         if(boats.size() == 0){
@@ -155,6 +168,12 @@ public class InputControl {
         validateIndex(boats, selection);
         return member.getBoats().get(selection);
     }
+
+    /**
+     * Selects a boat type from the boat object
+     * @param boat Boat objet to select type upon
+     * @return The type to add to the boat object
+     */
     private String selectBoatType(Boat boat){
         for(int i = 0; i < boat.getPermittedBoatTypes().size(); i++){
             System.out.print(i);
@@ -169,6 +188,12 @@ public class InputControl {
         String type = boat.getPermittedBoatTypes().get(selection);
         return type;
     }
+
+    /**
+     * Get integer input, used when selecting in lists
+     * @throw Error if input is not an int
+     * @return integer input
+     */
     private int getIntInput(){
 
         int index = -1;
@@ -177,17 +202,23 @@ public class InputControl {
             index = scan.nextInt();
             scan.nextLine();
         }catch(Exception e){
-           // scan.reset();
+
             print.errorIntInput();
             scan.nextLine();
             console.getInput();
         }
-       // scan.reset();
+
         return index;
     }
-    private void validateIndex(List array, int index){
+
+    /**
+     * Validating an index in a List.
+     * @param list The list to validate.
+     * @param index The index to validate.
+     */
+    private void validateIndex(List list, int index){
         try{
-            if(index < 0 || index > array.size()-1){
+            if(index < 0 || index > list.size()-1){
                 throw new Exception();
             }
         }catch(Exception e){
@@ -196,6 +227,11 @@ public class InputControl {
             console.getInput();
         }
     }
+    /**
+     * Get double input, used when setting length on boat
+     * @throw Error if input is not a double
+     * @return double input
+     */
     private Double getDoubleInput(){
         double dbl = -1;
         scan.useDelimiter("\n");
@@ -204,7 +240,7 @@ public class InputControl {
             scan.nextLine();
 
         }catch(Exception e){
-           // scan.reset();
+
             scan.nextLine();
             if(dbl == -1){
                 return dbl;
@@ -213,9 +249,14 @@ public class InputControl {
             print.errorDoubleInput();
             console.getInput();
         }
-        //scan.reset();
+
         return dbl;
     }
+
+    /**
+     * Prints the selected member instance. Can be used with a loop.
+     * @param member Member to be printed.
+     */
     private void printMember(Member member){
 
         System.out.print("Member: " + member.getName() + "\n"+ "\t" + "Info: " +"SocialSecNum = " + member.getP_number()

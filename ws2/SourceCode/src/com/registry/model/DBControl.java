@@ -7,7 +7,9 @@ import java.util.List;
 /**
  * Main class for reading and writing to the XML file.
  * A List is the representaion work object for the "DB"
- *Implementing a Interface to easily change type of persistance.
+ * Implementing a Interface to easily change type of persistance.
+ *
+ * Check interface for method comments.
  */
 public class DBControl implements IDBControl {
 

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Registry>
 	<member>
-		<name>AntonFjanton111</name>
+		<name>Ford Prefect</name>
 		<p_number>1111111111</p_number>
 		<m_id>3</m_id>
 		<Boat>
 		</Boat>
 	</member>
 	<member>
-		<name>Hanna</name>
+		<name>Tricia McMillian</name>
 		<p_number>1111111111</p_number>
 		<m_id>396</m_id>
 		<Boat>
 		</Boat>
 	</member>
 	<member>
-		<name>ApanBanarne</name>
-		<p_number>1111111111</p_number>
+		<name>Zaphod BeebleBrox</name>
+		<p_number>1234567891</p_number>
 		<m_id>215</m_id>
 		<Boat>
 			<length>20.0</length>
@@ -28,21 +28,21 @@
 		</Boat>
 	</member>
 	<member>
-		<name>hepphepp</name>
+		<name>Marvin</name>
 		<p_number>1111111111</p_number>
 		<m_id>325</m_id>
 		<Boat>
 		</Boat>
 	</member>
 	<member>
-		<name>andreas</name>
+		<name>Rabbit</name>
 		<p_number>1111111111</p_number>
 		<m_id>326</m_id>
 		<Boat>
 		</Boat>
 	</member>
 	<member>
-		<name>hahaha</name>
+		<name>The whale</name>
 		<p_number>1111111111</p_number>
 		<m_id>327</m_id>
 		<Boat>
@@ -53,17 +53,21 @@
 		</Boat>
 	</member>
 	<member>
-		<name>asda</name>
+		<name>A Bowl of petunias</name>
 		<p_number>1111111111</p_number>
 		<m_id>328</m_id>
 		<Boat>
 		</Boat>
 	</member>
 	<member>
-		<name>ahahahah</name>
+		<name>Tester</name>
 		<p_number>1234567890</p_number>
 		<m_id>329</m_id>
 		<Boat>
+			<length>100.0</length>
+			<type>Sailboat</type>
+			<length>50.0</length>
+			<type>Other</type>
 		</Boat>
 	</member>
 </Registry>
