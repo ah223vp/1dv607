@@ -45,7 +45,6 @@ public class Member {
     }
 
     public Boolean setP_number(int p_number) {
-
         // Checking value and length of number for simple validation
         if(this.p_number == 0 && p_number == -1 || Integer.toString(p_number).length() < p_numberLength ||
                 Integer.toString(p_number).length() > p_numberLength){

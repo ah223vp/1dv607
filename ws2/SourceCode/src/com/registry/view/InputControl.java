@@ -202,7 +202,6 @@ public class InputControl {
             index = scan.nextInt();
             scan.nextLine();
         }catch(Exception e){
-
             print.errorIntInput();
             scan.nextLine();
             console.getInput();
