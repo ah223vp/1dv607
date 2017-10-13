@@ -17,6 +17,10 @@ public class RulesFactory implements IAbstractFactory {
     return new BasicWinCondition();
   }
 
+  public void accept(IVisitor visitor){
+
+  }
+
   public String getName(){
     return name;
   }

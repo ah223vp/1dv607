@@ -2,11 +2,13 @@ package BlackJack.model.rules;
 
 public class RulesFactory_2 implements IAbstractFactory {
 
-    private String name = "RulesFactory_2";
+
+    private BasicHitStrategy rule;
 
     public IHitStrategy GetHitRule() {
 
-        return new BasicHitStrategy();
+        rule = new BasicHitStrategy();
+        return rule;
 
     }
 
@@ -18,7 +20,9 @@ public class RulesFactory_2 implements IAbstractFactory {
         return new BasicWinCondition();
     }
 
-    public String getName(){
-        return name;
+    public void accept(IVisitor visitor){
+        rule.accept(visitor);
     }
+
+
 }

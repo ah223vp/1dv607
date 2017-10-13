@@ -2,6 +2,7 @@ package BlackJack.model;
 
 import BlackJack.model.rules.ICardDealtObserver;
 import BlackJack.model.rules.IAbstractFactory;
+import BlackJack.model.rules.IVisitor;
 
 
 public class Game {
@@ -20,7 +21,7 @@ public class Game {
     }
 
     public void accept(IVisitor visitor){
-        visitor.visitGame(this);
+        //visitor.visitGame(this);
     }
 
     public void addSubscriber(ICardDealtObserver sub){

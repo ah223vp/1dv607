@@ -13,8 +13,8 @@ public class Program
 
     // Sending the rule to use from here
 
-    IAbstractFactory rules = new RulesFactory();
-    //IAbstractFactory rules = new RulesFactory_2();
+    //IAbstractFactory rules = new RulesFactory();
+    IAbstractFactory rules = new RulesFactory_2();
 
     Game g = new Game(rules);
     IView v = new SimpleView(); //new SwedishView();
@@ -22,7 +22,8 @@ public class Program
 
     PrintRulesVisitor visitor = new PrintRulesVisitor();
 
-    g.accept(visitor);
+    //g.accept(visitor);
+    rules.accept(visitor);
     
     while (ctrl.Play(g, v));
 
