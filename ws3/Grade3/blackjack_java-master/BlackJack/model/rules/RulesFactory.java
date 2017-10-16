@@ -2,7 +2,7 @@ package BlackJack.model.rules;
 
 public class RulesFactory implements IAbstractFactory {
 
-  private String name = "RulesFactory";
+
 
   public IHitStrategy GetHitRule() {
     //return new BasicHitStrategy();
@@ -17,11 +17,6 @@ public class RulesFactory implements IAbstractFactory {
     return new BasicWinCondition();
   }
 
-  public void accept(IVisitor visitor){
 
-  }
 
-  public String getName(){
-    return name;
-  }
 }

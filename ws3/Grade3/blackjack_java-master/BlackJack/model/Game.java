@@ -13,10 +13,10 @@ public class Game {
     private IAbstractFactory rules;
 
 
-    public Game(IAbstractFactory rules)
+    public Game(IAbstractFactory rules, IVisitor visitor)
     {
         this.rules = rules;
-        m_dealer = new Dealer(rules);
+        m_dealer = new Dealer(rules, visitor);
         m_player = new Player();
     }
 

@@ -14,4 +14,7 @@ public class BasicWinCondition implements IWinCondition {
         }
         return score >= a_player.CalcScore();
     }
+    public void accept(IVisitor visitor){
+        visitor.visit(this);
+    }
 }

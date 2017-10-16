@@ -5,7 +5,7 @@ import BlackJack.model.Dealer;
 import BlackJack.model.Player;
 import BlackJack.model.Card;  
 
-class InternationalNewGameStrategy implements INewGameStrategy {
+public class InternationalNewGameStrategy implements INewGameStrategy {
 
   public boolean NewGame(Deck a_deck, Dealer a_dealer, Player a_player) {
     Card c;
@@ -23,5 +23,8 @@ class InternationalNewGameStrategy implements INewGameStrategy {
     a_player.DealCard(c);
   
     return true;
+  }
+  public void accept(IVisitor visitor){
+    visitor.visit(this);
   }
 }

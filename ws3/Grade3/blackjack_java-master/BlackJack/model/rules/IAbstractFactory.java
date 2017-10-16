@@ -9,7 +9,5 @@ public interface IAbstractFactory {
 
     IWinCondition GetWinCondition();
 
-    void accept(IVisitor visitor);
-
 
 }

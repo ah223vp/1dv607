@@ -13,17 +13,16 @@ public class Program
 
     // Sending the rule to use from here
 
-    //IAbstractFactory rules = new RulesFactory();
-    IAbstractFactory rules = new RulesFactory_2();
-
-    Game g = new Game(rules);
-    IView v = new SimpleView(); //new SwedishView();
-    PlayGame ctrl = new PlayGame();
 
     PrintRulesVisitor visitor = new PrintRulesVisitor();
 
-    //g.accept(visitor);
-    rules.accept(visitor);
+    //IAbstractFactory rules = new RulesFactory();
+    IAbstractFactory rules = new RulesFactory_2();
+
+    Game g = new Game(rules, visitor);
+    IView v = new SimpleView(); //new SwedishView();
+    PlayGame ctrl = new PlayGame();
+
     
     while (ctrl.Play(g, v));
 

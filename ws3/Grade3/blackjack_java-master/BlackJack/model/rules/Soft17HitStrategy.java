@@ -29,5 +29,9 @@ public class Soft17HitStrategy implements IHitStrategy {
         }
         return false;
     }
+    public void accept(IVisitor visitor){
+        visitor.visit(this);
+    }
+
 
 }

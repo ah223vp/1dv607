@@ -13,16 +13,27 @@ public class Dealer extends Player {
     private IWinCondition m_winCondition;
 
 
-    public Dealer(IAbstractFactory rules) {
+
+
+    public Dealer(IAbstractFactory rules, IVisitor visitor) {
+
         m_newGameRule = rules.GetNewGameRule();
         m_hitRule = rules.GetHitRule();
 
         m_winCondition = rules.GetWinCondition();
+        accept(visitor);
 
     /*for(Card c : m_deck.GetCards()) {
       c.Show(true);
       System.out.println("" + c.GetValue() + " of " + c.GetColor());
     }    */
+    }
+
+    public void accept(IVisitor visitor){
+
+        m_hitRule.accept(visitor);
+        m_newGameRule.accept(visitor);
+        m_winCondition.accept(visitor);
     }
 
 
