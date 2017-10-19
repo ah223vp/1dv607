@@ -67,9 +67,13 @@ public class MemberActions {
         }
     }
     public void search(){
-        List<Member> result = med.searchMembersByName();
-        for(Member m : result){
-            printMember(m);
+        List<Member> result = med.search("NAME");
+        if(result.size() == 0){
+            System.out.println("No members found.");
+        } else {
+            for(Member m : result){
+                printMember(m);
+            }
         }
     }
     /**

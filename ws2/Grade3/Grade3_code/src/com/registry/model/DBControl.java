@@ -2,6 +2,9 @@ package com.registry.model;
 
 
 
+import com.registry.model.search.ISearch;
+import com.registry.model.search.SearchFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +22,8 @@ public class DBControl implements IDBControl {
     //private String dbFile = "./db.xml"; // File for .jar
     private DBReader db_read = new DBReader(dbFile);
     private DBWriter db_write = new DBWriter(dbFile);
+
+    SearchFactory sF = new SearchFactory();
 
     private List<Member> dbList;
 
@@ -63,14 +68,11 @@ public class DBControl implements IDBControl {
         dbList.remove(member);
         writeToFile(dbList);
     }
-    public List<Member> search(String name){
-        List<Member> result = new ArrayList<>();
-        for(Member m : dbList){
-            if(m.getName().contains(name)){
-                result.add(m);
-            }
-        }
-        return result;
+    public List<Member> search(Object obj, String type){
+
+        ISearch searchModule = sF.getSearchType(type);
+
+        return searchModule.search(dbList, obj);
     }
 
     // Private methods

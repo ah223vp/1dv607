@@ -42,11 +42,9 @@ public interface IDBControl {
      */
     void deleteMember(Member member);
 
-    /**
-     * Search method
-     * @return
-     */
-    List<Member> search(String name);
+    List<Member> search(Object obj, String type);
+
+
 
 
 

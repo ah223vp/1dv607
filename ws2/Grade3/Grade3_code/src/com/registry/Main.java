@@ -14,11 +14,10 @@ public class Main {
 
         IDBControl iDB = new DBControl();
 
+        // Created here. Don´t want to create it in the view.
         Authentication au = new Authentication();
 
         InputControl iC = new InputControl(iDB, au);
-
-
 
         iC.getInput();
 
