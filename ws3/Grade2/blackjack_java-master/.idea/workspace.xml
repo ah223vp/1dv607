@@ -13,11 +13,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.45988977">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BlackJack/model/Dealer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -28,11 +28,21 @@
           <file leaf-file-name="PlayGame.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BlackJack/controller/PlayGame.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PlayerWinOnEvenWinCondition.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/PlayerWinOnEvenWinCondition.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -41,11 +51,21 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/Game.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="544">
-                  <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+                  <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
                   <folding>
                     <element signature="e#505#506#0" expanded="true" />
                     <element signature="e#561#562#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="IView.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/BlackJack/view/IView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -58,7 +78,7 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/Player.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="782">
-                  <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+                  <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -70,7 +90,7 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/BasicHitStrategy.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
-                  <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+                  <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
                   <folding>
                     <element signature="e#195#196#0" expanded="true" />
                     <element signature="e#251#252#0" expanded="true" />
@@ -103,7 +123,7 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/IWinCondition.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="204">
-                  <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -113,7 +133,7 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/RulesFactory.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="204">
-                  <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+                  <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -123,7 +143,7 @@
             <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/BasicWinCondition.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="289">
-                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -257,7 +277,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ws2/Grade3/Grade3_code" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21494253" />
@@ -419,12 +439,12 @@
       <workItem from="1507711466544" duration="507000" />
       <workItem from="1508149469177" duration="11000" />
       <workItem from="1508161818470" duration="814000" />
-      <workItem from="1508401214123" duration="3460000" />
+      <workItem from="1508401214123" duration="5093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29995000" />
+    <option name="totallyTimeSpent" value="31628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -774,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJack/view/IView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlackJack/view/SwedishView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -806,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/PlayerWinOnEvenWinCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlackJack/model/ICardDealtObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -825,7 +829,7 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/IWinCondition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -841,7 +845,7 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/RulesFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -849,7 +853,7 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <caret line="41" column="26" lean-forward="false" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
             <element signature="e#505#506#0" expanded="true" />
             <element signature="e#561#562#0" expanded="true" />
@@ -860,7 +864,7 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/BasicWinCondition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -868,20 +872,10 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/BasicHitStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
             <element signature="e#195#196#0" expanded="true" />
             <element signature="e#251#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJack/controller/PlayGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -897,7 +891,7 @@
     <entry file="file://$PROJECT_DIR$/BlackJack/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -906,11 +900,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackJack/model/Dealer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackJack/view/IView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackJack/controller/PlayGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackJack/model/rules/PlayerWinOnEvenWinCondition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

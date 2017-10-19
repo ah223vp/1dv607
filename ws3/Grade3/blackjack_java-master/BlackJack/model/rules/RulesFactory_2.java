@@ -13,7 +13,7 @@ public class RulesFactory_2 implements IAbstractFactory {
     }
 
     public IWinCondition GetWinCondition(){
-        return new BasicWinCondition();
+        return new PlayerWinOnEvenWinCondition();
     }
 
 

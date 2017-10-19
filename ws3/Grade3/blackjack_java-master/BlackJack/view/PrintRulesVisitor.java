@@ -26,5 +26,8 @@ public class PrintRulesVisitor implements IVisitor {
     public void visit(BasicWinCondition rule){
         System.out.println("Visited BasicWinCondition");
     }
+    public void visit(PlayerWinOnEvenWinCondition rule){
+        System.out.println("Visited PlayerWinOnEvenWinConditionWinCondition");
+    }
 
 }

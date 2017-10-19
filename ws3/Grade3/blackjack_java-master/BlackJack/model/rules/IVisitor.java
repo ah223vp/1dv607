@@ -9,6 +9,6 @@ public interface IVisitor {
     void visit(BasicWinCondition rule);
     void visit(InternationalNewGameStrategy rule);
     void visit(BasicHitStrategy rule);
-    //void visit(BasicWinCondition rule);
+    void visit(PlayerWinOnEvenWinCondition rule);
 
 }
