@@ -1,8 +1,6 @@
 package BlackJack.model;
 
 
-import BlackJack.model.rules.ICardDealtObserver;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.LinkedList;
@@ -31,7 +29,6 @@ public class Player {
         }
 
     }
-
 
     public void DealCard(Card a_addToHand)
     {

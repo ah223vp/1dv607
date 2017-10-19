@@ -2,7 +2,7 @@ package BlackJack.controller;
 
 
 import BlackJack.model.Game;
-import BlackJack.model.rules.ICardDealtObserver;
+import BlackJack.model.ICardDealtObserver;
 import BlackJack.view.IView;
 
 public class PlayGame implements ICardDealtObserver {

@@ -1,8 +1,5 @@
 package BlackJack.model;
 
-import BlackJack.model.rules.ICardDealtObserver;
-
-
 
 public class Game {
 

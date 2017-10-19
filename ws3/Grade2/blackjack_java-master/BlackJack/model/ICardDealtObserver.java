@@ -1,6 +1,6 @@
-package BlackJack.model.rules;
+package BlackJack.model;
 
-import BlackJack.model.Card;
+
 
 public interface ICardDealtObserver {
     void DealCard_obs();
