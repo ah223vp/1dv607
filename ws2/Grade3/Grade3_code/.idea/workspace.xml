@@ -120,11 +120,9 @@
       <file leaf-file-name="MemberActions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/registry/view/MemberActions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
-                <element signature="e#662#663#0" expanded="true" />
-                <element signature="e#695#696#0" expanded="true" />
                 <element signature="method#deleteMember#0;class#MemberActions#0" expanded="false" />
                 <element signature="method#addMember#0;class#MemberActions#0" expanded="false" />
                 <element signature="method#changeMemberInfo#0;class#MemberActions#0" expanded="false" />
@@ -304,14 +302,14 @@
       </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Grade2/Grade2_code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ws3/Grade4/blackjack_java-master" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -425,15 +423,17 @@
       <workItem from="1507885545419" duration="30000" />
       <workItem from="1507896389749" duration="1029000" />
       <workItem from="1508404963149" duration="14613000" />
-      <workItem from="1508487332601" duration="35000" />
+      <workItem from="1508487332601" duration="1233000" />
+      <workItem from="1508492655033" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184220000" />
+    <option name="totallyTimeSpent" value="185433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -842,11 +842,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/registry/view/MemberActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
             <element signature="method#deleteMember#0;class#MemberActions#0" expanded="false" />
             <element signature="method#addMember#0;class#MemberActions#0" expanded="false" />
             <element signature="method#changeMemberInfo#0;class#MemberActions#0" expanded="false" />
