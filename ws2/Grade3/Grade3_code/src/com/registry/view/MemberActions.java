@@ -21,7 +21,6 @@ public class MemberActions {
 
     public MemberActions(IDBControl m_DB, IInputObserver sub, IMediator med) {
         this.med = med;
-        med.registerDB(m_DB);
         this.print = new PrintStrings_eng();
         this.m_DB = m_DB;
         this.sub = sub;
@@ -67,6 +66,9 @@ public class MemberActions {
         }
     }
     public void search(){
+
+        // Type of search, hardcoded now. Easy to add more.
+        // Probably would have created an enum that holds the search types.
         List<Member> result = med.search("NAME");
         if(result.size() == 0){
             System.out.println("No members found.");

@@ -1,6 +1,6 @@
 package BlackJack.view;
 
-public class SwedishView
+public class SwedishView implements IView
     {
         public void DisplayWelcomeMessage()
         {
@@ -11,19 +11,28 @@ public class SwedishView
             System.out.println("----------------------");
             System.out.println("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
         }
-        
-        public int GetInput()
+
+        public IView.Actions GetInput()
         {
-          try {
-            int c = System.in.read();
-            while (c == '\r' || c =='\n') {
-              c = System.in.read();
+            try {
+                int c = System.in.read();
+                while (c == '\r' || c =='\n') {
+                    c = System.in.read();
+                }
+                if(c == 'p'){
+                    return IView.Actions.PLAY;
+                }else if(c == 'h'){
+                    return IView.Actions.HIT;
+                }else if(c == 's'){
+                    return IView.Actions.STAND;
+                }else if(c == 'q'){
+                    return IView.Actions.QUIT;
+                }
+
+            } catch (java.io.IOException e) {
+                System.out.println("" + e);
             }
-            return c;
-          } catch (java.io.IOException e) {
-            System.out.println("" + e);
-            return 0;
-          }
+            return IView.Actions.NOACTION;
         }
         
         public void DisplayCard(BlackJack.model.Card a_card)

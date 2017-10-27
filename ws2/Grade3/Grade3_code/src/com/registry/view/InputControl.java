@@ -20,6 +20,9 @@ public class InputControl implements IInputObserver {
 
     public InputControl(IDBControl m_DB, Authentication auth) {
         IMediator med = new Mediator();
+        // Doing this here to show I could have done it like this. This way the MemberActions
+        // would not need to know about m_DB
+        med.registerDB(m_DB);
         this.auth = new AuthenticationActions(auth);
         this.memberActions = new MemberActions(m_DB, this, med);
         this.boatActions = new BoatActions(this.memberActions, m_DB, this);

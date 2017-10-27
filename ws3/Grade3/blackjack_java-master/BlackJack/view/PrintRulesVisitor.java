@@ -1,6 +1,7 @@
 package BlackJack.view;
 
 
+import BlackJack.model.rules.IVisitor;
 import BlackJack.model.rules.*;
 
 public class PrintRulesVisitor implements IVisitor {

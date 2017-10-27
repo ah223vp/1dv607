@@ -2,7 +2,6 @@ package BlackJack.model;
 
 import BlackJack.model.rules.*;
 
-import java.util.ArrayList;
 
 
 public class Dealer extends Player {
@@ -22,10 +21,6 @@ public class Dealer extends Player {
 
         m_winCondition = a_rulesFactory.GetWinCondition();
 
-    /*for(Card c : m_deck.GetCards()) {
-      c.Show(true);
-      System.out.println("" + c.GetValue() + " of " + c.GetColor());
-    }    */
     }
 
 
@@ -41,10 +36,6 @@ public class Dealer extends Player {
 
     public boolean Hit(Player a_player) {
         if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver()) {
-           // Card c;
-           // c = m_deck.GetCard();
-           // c.Show(true);
-           // a_player.DealCard_obs(c);
             a_player.DealCard(getCard(true));
 
             return true;
@@ -55,18 +46,12 @@ public class Dealer extends Player {
     public boolean Stand(){
         // Show dealer hand
         ShowHand();
-        // Init card object
-       // Card c;
 
         // Checking dealer score depending on rule
         while (m_hitRule.DoHit(this)){
-           // c = m_deck.GetCard();
-           // c.Show(true);
-           // DealCard_obs(c);
+
             DealCard(getCard(true));
-
             return true;
-
         }
         // False return eval of winner
         return false;
@@ -82,14 +67,6 @@ public class Dealer extends Player {
             return false;
         }
 
-        /*
-        if (a_player.CalcScore() > g_maxScore) {
-            return true;
-        } else if (CalcScore() > g_maxScore) {
-            return false;
-        }
-        return CalcScore() >= a_player.CalcScore();
-        */
     }
 
     /**

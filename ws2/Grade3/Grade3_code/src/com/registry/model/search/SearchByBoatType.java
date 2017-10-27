@@ -7,6 +7,14 @@ import java.util.List;
 
 public class SearchByBoatType implements ISearch<String> {
 
+
+    /**
+     *
+     * Implement if I have time
+     *
+     *
+     */
+
     public List<Member> search(List<Member> dbList, String type){
         List<Member> result = new ArrayList<>();
         for(Member m : dbList){

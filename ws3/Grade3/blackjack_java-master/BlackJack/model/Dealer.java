@@ -13,8 +13,6 @@ public class Dealer extends Player {
     private IWinCondition m_winCondition;
 
 
-
-
     public Dealer(IAbstractFactory rules, IVisitor visitor) {
 
         m_newGameRule = rules.GetNewGameRule();
@@ -23,10 +21,6 @@ public class Dealer extends Player {
         m_winCondition = rules.GetWinCondition();
         accept(visitor);
 
-    /*for(Card c : m_deck.GetCards()) {
-      c.Show(true);
-      System.out.println("" + c.GetValue() + " of " + c.GetColor());
-    }    */
     }
 
     public void accept(IVisitor visitor){
@@ -49,10 +43,7 @@ public class Dealer extends Player {
 
     public boolean Hit(Player a_player) {
         if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver()) {
-           // Card c;
-           // c = m_deck.GetCard();
-           // c.Show(true);
-           // a_player.DealCard_obs(c);
+
             a_player.DealCard(getCard(true));
 
             return true;
@@ -63,14 +54,10 @@ public class Dealer extends Player {
     public boolean Stand(){
         // Show dealer hand
         ShowHand();
-        // Init card object
-       // Card c;
 
         // Checking dealer score depending on rule
         while (m_hitRule.DoHit(this)){
-           // c = m_deck.GetCard();
-           // c.Show(true);
-           // DealCard_obs(c);
+
             DealCard(getCard(true));
 
             return true;
@@ -90,14 +77,6 @@ public class Dealer extends Player {
             return false;
         }
 
-        /*
-        if (a_player.CalcScore() > g_maxScore) {
-            return true;
-        } else if (CalcScore() > g_maxScore) {
-            return false;
-        }
-        return CalcScore() >= a_player.CalcScore();
-        */
     }
 
     /**

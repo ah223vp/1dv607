@@ -16,8 +16,8 @@ public class Program
 
     PrintRulesVisitor visitor = new PrintRulesVisitor();
 
-    //IAbstractFactory rules = new RulesFactory();
-    IAbstractFactory rules = new RulesFactory_2();
+    //IAbstractFactory rules = new RulesFactoryAmerican();
+    IAbstractFactory rules = new RulesFactoryInternational();
 
     Game g = new Game(rules, visitor);
     IView v = new SimpleView(); //new SwedishView();

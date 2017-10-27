@@ -20,10 +20,6 @@ public class Game {
         m_player = new Player();
     }
 
-    public void accept(IVisitor visitor){
-        //visitor.visitGame(this);
-    }
-
     public void addSubscriber(ICardDealtObserver sub){
 
         m_player.addSubscriber(sub);
@@ -77,8 +73,4 @@ public class Game {
         return m_player.CalcScore();
     }
 
-    // Is this allowed?
-    public IAbstractFactory getRules() {
-        return rules;
-    }
 }
