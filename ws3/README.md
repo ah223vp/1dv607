@@ -1,3 +1,4 @@
 # blackjack_java
 
-Fork this code to work with java in workshop 3. This repo only contains java files.
+Did not add any instructions to this repo since it is basically the same project.
+No changes to any compiling or such has been made.
